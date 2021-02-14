@@ -15,7 +15,7 @@
   },
   "scripts": {
     "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint src --ext .ts --fix",
     "clean": "rimraf dist/*",
     "debug": "yarn lint && tsc && yarn clean",
     "start": "ts-node src/index.ts"
