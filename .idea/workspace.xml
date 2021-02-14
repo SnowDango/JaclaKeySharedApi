@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/eslint.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/eslint.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613207775988</updated>
       <workItem from="1613207777102" duration="2137000" />
-      <workItem from="1613321273759" duration="12614000" />
+      <workItem from="1613321273759" duration="12922000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -122,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613337165388</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add HEROKUへの自動deploy時のversion指定">
+      <created>1613337314530</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613337314530</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add HEROKUへの自動deploy時のversion指定">
+      <created>1613337383878</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613337383878</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +151,7 @@
     <MESSAGE value="add build.yml create dotenv" />
     <MESSAGE value="eslintの改善" />
     <MESSAGE value="add HEROKUへの自動deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="add HEROKUへの自動deploy" />
+    <MESSAGE value="add HEROKUへの自動deploy時のversion指定" />
+    <option name="LAST_COMMIT_MESSAGE" value="add HEROKUへの自動deploy時のversion指定" />
   </component>
 </project>

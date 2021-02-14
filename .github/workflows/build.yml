@@ -1,6 +1,6 @@
 
 
-name: ESList
+name: Build
 
 on: pull_request
 
