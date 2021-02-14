@@ -4,20 +4,38 @@
   "main": ".dist/index.js",
   "license": "MIT",
   "dependencies": {
+    "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.20.0",
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "json5": "^2.2.0",
+    "ts-jest": "^26.5.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
   },
+  "jest": {
+    "moduleFileExtensions": ["ts"],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+    "ts-jest": {
+      "tsConfigFile": "tsconfig.json"
+    }
+  },
+  "testMatch": [
+    "test/*.(ts|tsx|js)"
+  ]
+},
   "scripts": {
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
     "clean": "rimraf dist/*",
     "debug": "yarn lint && tsc && yarn clean",
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "test": "jest"
   }
 }

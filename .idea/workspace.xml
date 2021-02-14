@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/eslint.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/eslint.yml" afterDir="false" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="add jest">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613207775988</updated>
       <workItem from="1613207777102" duration="2137000" />
-      <workItem from="1613321273759" duration="13232000" />
+      <workItem from="1613321273759" duration="13808000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -146,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613337656050</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add HEROKUへの自動deploy時のversion指定">
+      <created>1613337799849</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1613337799849</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fixed Heroku Deploy">
+      <created>1613337976624</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1613337976624</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +174,7 @@
     <MESSAGE value="eslintの改善" />
     <MESSAGE value="add HEROKUへの自動deploy" />
     <MESSAGE value="add HEROKUへの自動deploy時のversion指定" />
-    <option name="LAST_COMMIT_MESSAGE" value="add HEROKUへの自動deploy時のversion指定" />
+    <MESSAGE value="fixed Heroku Deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed Heroku Deploy" />
   </component>
 </project>
