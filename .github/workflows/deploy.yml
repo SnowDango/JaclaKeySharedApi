@@ -24,6 +24,7 @@ jobs:
           # moduleのinstall
       - name: Install dependencies
         run: yarn --frozen-lockfile
+          with: yarn install
           # codeのチェック
       - name: cording check
         run: yarn eslint
