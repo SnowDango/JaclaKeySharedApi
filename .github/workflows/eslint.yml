@@ -21,4 +21,4 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: cording check
-        run: yarn eslint
+        run: yarn lint
