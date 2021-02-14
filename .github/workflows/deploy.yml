@@ -23,8 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           # moduleのinstall
       - name: Install dependencies
-        run: yarn --frozen-lockfile
-          with: yarn install
+        run: yarn install
           # codeのチェック
       - name: cording check
         run: yarn eslint
