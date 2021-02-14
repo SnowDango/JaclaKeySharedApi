@@ -1,0 +1,32 @@
+
+name: HerokuDeploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+          # moduleのinstall
+      - name: Install dependencies
+          run: yarn --frozen-lockfile
+          # codeのチェック
+      - name: cording check
+          run: yarn eslint
+          # dotEnvの生成
+      - name: Create dotenv
+          run: echo "${{ secrets.ENV }}" > .env
+          # buildのチェック
+      - name: buiding check
+          run: yarn debug
+          # HerokuへのDeploy
+      - name: HerokuDeploy
+          uses: akhileshns/heroku-deploy@v3.11.10 # This is the action
+            with:
+              heroku_api_key: ${{secrets.HEROKU.API_KEY}}
+              heroku_app_name: ${{secrets.HEROKU.APP_NAME}}
+              heroku_email: ${{secrets.HEROKU.EMAIL}}

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613207775988</updated>
       <workItem from="1613207777102" duration="2137000" />
-      <workItem from="1613321273759" duration="10680000" />
+      <workItem from="1613321273759" duration="12330000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -106,7 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613329109704</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="eslintの改善">
+      <created>1613334697807</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613334697807</updated>
+    </task>
+    <task id="LOCAL-00008" summary="eslintの改善">
+      <created>1613334868764</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613334868764</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +128,7 @@
     <MESSAGE value="update README.md" />
     <MESSAGE value="add test: cording check and build test" />
     <MESSAGE value="add build.yml create dotenv" />
-    <option name="LAST_COMMIT_MESSAGE" value="add build.yml create dotenv" />
+    <MESSAGE value="eslintの改善" />
+    <option name="LAST_COMMIT_MESSAGE" value="eslintの改善" />
   </component>
 </project>
