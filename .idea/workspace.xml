@@ -60,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613207775988</updated>
       <workItem from="1613207777102" duration="2137000" />
-      <workItem from="1613321273759" duration="12922000" />
+      <workItem from="1613321273759" duration="13232000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613337383878</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add HEROKUへの自動deploy時のversion指定">
+      <created>1613337656050</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613337656050</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

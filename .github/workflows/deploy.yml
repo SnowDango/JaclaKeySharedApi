@@ -17,26 +17,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v1
-          with:
-            node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
           # moduleのinstall
       - name: Install dependencies
-          run: yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
           # codeのチェック
       - name: cording check
-          run: yarn eslint
+        run: yarn eslint
           # dotEnvの生成
       - name: Create dotenv
-          run: echo "${{ secrets.ENV }}" > .env
+        run: echo "${{ secrets.ENV }}" > .env
           # buildのチェック
       - name: buiding check
-          run: yarn debug
+        run: yarn debug
           # HerokuへのDeploy
       - name: HerokuDeploy
-          uses: akhileshns/heroku-deploy@v3.11.10 # This is the action
-            with:
-              heroku_api_key: ${{secrets.HEROKU.API_KEY}}
-              heroku_app_name: ${{secrets.HEROKU.APP_NAME}}
-              heroku_email: ${{secrets.HEROKU.EMAIL}}
+        uses: akhileshns/heroku-deploy@v3.11.10 # This is the action
+          with:
+            heroku_api_key: ${{secrets.HEROKU.API_KEY}}
+            heroku_app_name: ${{secrets.HEROKU.APP_NAME}}
+            heroku_email: ${{secrets.HEROKU.EMAIL}}
