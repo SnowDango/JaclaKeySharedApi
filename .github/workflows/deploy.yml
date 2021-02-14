@@ -24,18 +24,18 @@ jobs:
           # moduleのinstall
       - name: Install dependencies
         run: yarn install
-          # codeのチェック
+        # codeのチェック
       - name: cording check
         run: yarn eslint
-          # dotEnvの生成
+        # dotEnvの生成
       - name: Create dotenv
         run: echo "${{ secrets.ENV }}" > .env
-          # buildのチェック
+        # buildのチェック
       - name: buiding check
         run: yarn debug
-          # HerokuへのDeploy
+        # HerokuへのDeploy
       - uses: akhileshns/heroku-deploy@v3.11.10 # This is the action
         with:
-          heroku_api_key: ${{secrets.HEROKU.API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU.APP_NAME}}
-          heroku_email: ${{secrets.HEROKU.EMAIL}}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
