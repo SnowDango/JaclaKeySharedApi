@@ -1,7 +1,7 @@
 import Express from 'express'
 
 const port = 3000 // port変更しても可
-const startedFunc = ()=>{ // 開始時のfunc
+const startedFunc = () => { // 開始時のfunc
 
 }
 
