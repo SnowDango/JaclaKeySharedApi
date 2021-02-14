@@ -17,7 +17,6 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "clean": "rimraf dist/*",
-    "build": "npm-run-all clean tsc",
     "debug": "yarn lint && tsc && yarn clean",
     "start": "ts-node src/index.ts"
   }
