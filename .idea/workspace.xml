@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="remove actions deploy &#10;convert heroku app access">
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -60,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613207775988</updated>
       <workItem from="1613207777102" duration="2137000" />
-      <workItem from="1613321273759" duration="15313000" />
+      <workItem from="1613321273759" duration="15711000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -223,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613339621627</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add deploy">
+      <created>1613340625833</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1613340625833</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +246,7 @@
     <MESSAGE value="fixed Heroku Deploy" />
     <MESSAGE value="add jest" />
     <MESSAGE value="fixed deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed deploy" />
+    <MESSAGE value="add deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="add deploy" />
   </component>
 </project>
