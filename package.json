@@ -1,7 +1,7 @@
 {
   "name": "jacla-key-shared-api",
   "version": "1.0.0",
-  "main": ".dist/index.js",
+  "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
     "@types/express": "^4.17.11",
@@ -11,6 +11,7 @@
     "dotenv": "^8.2.0",
     "eslint": "^7.20.0",
     "express": "^4.17.1",
+    "figlet": "^1.5.0",
     "jest": "^26.6.3",
     "json5": "^2.2.0",
     "ts-jest": "^26.5.1",
@@ -40,5 +41,8 @@
     "debug": "yarn lint && tsc && yarn clean",
     "start": "ts-node src/index.ts",
     "test": "jest"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.2.1"
   }
 }

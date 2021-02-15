@@ -1,9 +1,17 @@
 import Express from 'express'
+import figlet from 'figlet';
 import {router} from './router/Router'
 
 const port = 3000 // port変更しても可
 const startedFunc = () => { // 開始時のfunc
-
+  figlet.loadFontSync("Standard")
+  figlet.text('JACLA KEY SHARE!',((error, result) => {
+    if(!error){
+      console.log(result)
+    }else{
+      console.log(error)
+    }
+  }))
 }
 
 const app: Express.Express = Express()
