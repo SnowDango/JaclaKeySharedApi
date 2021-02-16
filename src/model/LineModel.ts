@@ -1,4 +1,5 @@
-
+import {shareSlack} from '../domain/usercase/ShareSlack'
+import {shareDiscord} from "../domain/usercase/ShareDiscord";
 
 export default class LineModel{
 
@@ -8,7 +9,10 @@ export default class LineModel{
 
   stickerModel = (userId: string, packageId: string, sticker: string) => {
 
+  }
 
-
+  private share = () => {
+    shareDiscord("","")
+    shareSlack("","")
   }
 }

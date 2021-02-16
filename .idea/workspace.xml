@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="fixed deploy">
-      <change afterPath="$PROJECT_DIR$/src/domain/usercase/KeyStatus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613341048122</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add model and usecase">
+      <created>1613463571208</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1613463571208</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +274,7 @@
     <MESSAGE value="add jest" />
     <MESSAGE value="add deploy" />
     <MESSAGE value="fixed deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed deploy" />
+    <MESSAGE value="add model and usecase" />
+    <option name="LAST_COMMIT_MESSAGE" value="add model and usecase" />
   </component>
 </project>

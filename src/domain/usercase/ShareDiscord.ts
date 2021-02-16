@@ -7,13 +7,10 @@ const env = load({
 
 export const shareDiscord = async (baseStatus: string,baseText: string) => {
   const params = {
-    payload: {
-      content: baseStatus + "\n```\n" + baseText + "\n```"
-    }
+    content: baseStatus + "\n```\n" + baseText + "\n```"
   }
   // discordに鍵情報を共有
   axios.post(env.DISCORD_URL,params).catch((error) => {
     console.error(error)
   })
-
 }
