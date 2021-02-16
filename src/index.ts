@@ -1,6 +1,6 @@
 import Express from 'express'
 import figlet from 'figlet';
-import {router} from './router/Router'
+import {router} from './routers/Router'
 
 const port = 3000 // port変更しても可
 const startedFunc = () => { // 開始時のfunc
