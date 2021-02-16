@@ -17,7 +17,6 @@ router.post('/fromLine',(req, res) => {
     const stickerId = body.events[0].stickerId
     controller.fromLineSticker(userId,packageId,stickerId)
   }
-
 })
 
 /* LineからのpostData(多分あってるはず)

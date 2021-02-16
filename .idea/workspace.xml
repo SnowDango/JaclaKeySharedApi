@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/responses/ResponseLine.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/Router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/Router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/responses/ResponseLine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/responses/ResponseLine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/Router.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="add_model" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

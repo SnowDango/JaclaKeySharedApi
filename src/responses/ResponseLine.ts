@@ -1,6 +1,6 @@
 import {Response} from "express";
 
-export class ResponseLine {
+export default class ResponseLine {
 
   private res: Response;
 
