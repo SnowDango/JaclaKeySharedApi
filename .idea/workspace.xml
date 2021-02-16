@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/responses/ResponseLine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/responses/ResponseLine.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routers/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/Router.ts" afterDir="false" />
@@ -23,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="add_model" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -251,12 +254,12 @@
       <option name="project" value="LOCAL" />
       <updated>1613341048122</updated>
     </task>
-    <task id="LOCAL-00027" summary="start時のfiglet表示">
-      <created>1613375137818</created>
+    <task id="LOCAL-00027" summary="add model and usecase">
+      <created>1613463571208</created>
       <option name="number" value="00027" />
       <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1613375137818</updated>
+      <updated>1613463571208</updated>
     </task>
     <option name="localTasksCounter" value="28" />
     <servers />
@@ -275,7 +278,7 @@
     <MESSAGE value="add jest" />
     <MESSAGE value="add deploy" />
     <MESSAGE value="fixed deploy" />
-    <MESSAGE value="start時のfiglet表示" />
-    <option name="LAST_COMMIT_MESSAGE" value="start時のfiglet表示" />
+    <MESSAGE value="add model and usecase" />
+    <option name="LAST_COMMIT_MESSAGE" value="add model and usecase" />
   </component>
 </project>
