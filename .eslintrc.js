@@ -49,7 +49,7 @@ module.exports = {
         "format": ["PascalCase"],
       },{ // variableについてcamelCase,UPPER_CASE以外不許可
         "selector":["variable","property"],
-        "format": ["camelCase","UPPER_CASE"],
+        "format": ["camelCase","UPPER_CASE","PascalCase"],
       },{ // classMethod, objectLiteralMethod, typeMethod, accessor, parameterProperty, parameter, function, property
       　　 // についてcamelCase以外不許可
         "selector":["method","accessor","parameterProperty","parameter","function"],
