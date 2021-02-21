@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="fixed deploy">
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="add test and getUserName">
+      <change afterPath="$PROJECT_DIR$/test/domain/usecase/LineUser.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/usecase/ShareSlack.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/KeyStatus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/KeyStatus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -47,16 +57,35 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs_interpreter_path" value="/usr/local/Cellar/node/15.8.0/bin/node" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.basic">
+    <configuration name="basic" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" />
+      <test-names>
+        <test-name value="basic" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="index.ts" type="NodeJSConfigurationType" nameIsGenerated="true" node-parameters="." path-to-js-file="src/index.ts" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.basic" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,6 +97,9 @@
       <updated>1613207775988</updated>
       <workItem from="1613207777102" duration="2137000" />
       <workItem from="1613321273759" duration="16011000" />
+      <workItem from="1613548670199" duration="4003000" />
+      <workItem from="1613885393534" duration="8788000" />
+      <workItem from="1613910626080" duration="5876000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -251,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613341048122</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixed controller used model">
+      <created>1613465374326</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1613465374326</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +307,12 @@
     <MESSAGE value="add jest" />
     <MESSAGE value="add deploy" />
     <MESSAGE value="fixed deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed deploy" />
+    <MESSAGE value="fixed controller used model" />
+    <MESSAGE value="add test and getUserName" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test and getUserName" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

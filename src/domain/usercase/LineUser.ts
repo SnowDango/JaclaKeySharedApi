@@ -6,17 +6,20 @@ const env = load({
   LINE_CHANNEL_ACCESS_TOKEN: String
 })
 
-export const getUserName = async ( userId: string ):Promise<string> => {
+export const getUserName = async (userId: string): Promise<string> => {
   const content = {
     headers: {
-      Authorization:'Bearer '+ env.LINE_CHANNEL_ACCESS_TOKEN
+      'content-type': 'application/json',
+      'Authorization':'Bearer '+env.LINE_CHANNEL_ACCESS_TOKEN
     }
   }
   // LineからUserNameを持ってくる
-  try {
-    const userData = await axios.get(env.LINE_API_URL + userId, content)
-    return userData.data.displayName
-  }catch (e) {
-    return "友達でないUser"
-  }
+  const userData = await axios.get(env.LINE_API_URL+userId,content).catch(error => {return {status: 404,data:{}}})
+  return (() => {
+    if (userData.status === 200) {
+      return userData.data.displayName
+    } else {
+      return "不明なUser"
+    }
+  })()
 }

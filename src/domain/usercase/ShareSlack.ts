@@ -5,11 +5,10 @@ const env = load({
   SLACK_URL: String
 })
 
-export const shareSlack = async (baseStatus: string, baseText: string) => {
+export const shareSlack = async (baseStatus: string, baseText: string): Promise<number> => {
   const params = {
-    text: baseStatus + "\n>>>"+baseText
+    text: baseStatus + "\n>>>" + baseText
   }
-  axios.post(env.SLACK_URL,params).catch((error) => {
-    console.error(error)
-  })
+  const data = await axios.post(env.SLACK_URL,params,{headers:{'content-type':"application/json"}})
+  return data.status // success 200
 }

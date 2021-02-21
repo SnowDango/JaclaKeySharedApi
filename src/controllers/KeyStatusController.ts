@@ -10,7 +10,7 @@ export default class KeyStatusController {
     this.response = new ResponseLine(res)
   }
 
-  fromLineText = (userId: string, text: string) => {
+  fromLineText = (userId: string, text: string): void => {
 
     // TODO textの場合の処理
     this.model.textModel(userId,text)
@@ -18,7 +18,7 @@ export default class KeyStatusController {
     this.response.successRes(200)
   }
 
-  fromLineSticker = (userId: string, packageId: string, stickerId: string) => {
+  fromLineSticker = (userId: string, packageId: string, stickerId: string): void => {
 
     // TODO stickerの場合の処理
 

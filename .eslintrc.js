@@ -40,6 +40,7 @@ module.exports = {
     "no-sparse-arrays":2, // 配列においてまばらな値設定を行わないこと
     "no-process-env":1, // process.env は使わないこと
     "@typescript-eslint/no-unsafe-assignment": 1,
+    "@typescript-eslint/no-unsafe-return": 1,
     "@typescript-eslint/no-unsafe-call": 1,
     "@typescript-eslint/no-unsafe-member-access": 1,
     "@typescript-eslint/naming-convention": [
@@ -47,11 +48,11 @@ module.exports = {
         "selector":"typeLike",
         "format": ["PascalCase"],
       },{ // variableについてcamelCase,UPPER_CASE以外不許可
-        "selector":["variable"],
+        "selector":["variable","property"],
         "format": ["camelCase","UPPER_CASE"],
       },{ // classMethod, objectLiteralMethod, typeMethod, accessor, parameterProperty, parameter, function, property
       　　 // についてcamelCase以外不許可
-        "selector":["method","accessor","parameterProperty","parameter","function","property"],
+        "selector":["method","accessor","parameterProperty","parameter","function"],
         "format": ["camelCase"]
       },{
           // enumMemberについてUPPER_CASE以外不許可

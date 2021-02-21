@@ -22,7 +22,7 @@
   },
   "jest": {
     "moduleFileExtensions": [
-      "ts"
+      "ts","js"
     ],
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
@@ -33,7 +33,8 @@
       }
     },
     "testMatch": [
-      "test/*.(ts|tsx|js)"
+      "**/test/*.test.(ts|tsx|js)",
+      "**/test/**/*.test.(ts|tsx|js)"
     ]
   },
   "scripts": {
@@ -42,7 +43,7 @@
     "clean": "rimraf dist/*",
     "debug": "yarn lint && tsc && yarn clean",
     "start": "ts-node src/index.ts",
-    "test": "jest"
+    "test": "jest --silent false --verbose false"
   },
   "devDependencies": {
     "@types/figlet": "^1.2.1"
