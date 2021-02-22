@@ -2,7 +2,7 @@ import {Pool, QueryResult} from 'pg'
 import {load} from "ts-dotenv";
 
 const env = load({
-  DB_URL:　String,
+  DB_URL: String,
   DB_TABLE_NAME_PLACE: String
 })
 

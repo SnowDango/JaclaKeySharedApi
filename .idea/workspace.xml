@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/usecase/KeyStatus.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testPg.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/KeyStatus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/KeyStatus.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +96,7 @@
       <workItem from="1613548670199" duration="4003000" />
       <workItem from="1613885393534" duration="8788000" />
       <workItem from="1613910626080" duration="14609000" />
-      <workItem from="1613927521603" duration="11710000" />
+      <workItem from="1613927521603" duration="12060000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -307,7 +301,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613917559499</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="add key status search">
+      <created>1613993122143</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1613993122144</updated>
+    </task>
+    <task id="LOCAL-00031" summary="delete test pg">
+      <created>1613993187301</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1613993187301</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +336,9 @@
     <MESSAGE value="add test and getUserName" />
     <MESSAGE value="fixed getUserName test" />
     <MESSAGE value="add variable type PascalCase" />
-    <option name="LAST_COMMIT_MESSAGE" value="add variable type PascalCase" />
+    <MESSAGE value="add key status search" />
+    <MESSAGE value="delete test pg" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete test pg" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
