@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/model/LineModel.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/LineModel.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/LineModel.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <workItem from="1613885393534" duration="8788000" />
       <workItem from="1613910626080" duration="14609000" />
       <workItem from="1613927521603" duration="25707000" />
-      <workItem from="1614010571413" duration="1245000" />
+      <workItem from="1614010571413" duration="3277000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -334,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613999612242</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="crate textModel into LineModel and test">
+      <created>1614011932192</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1614011932192</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +363,8 @@
     <MESSAGE value="delete test pg" />
     <MESSAGE value="fixed lint" />
     <MESSAGE value="fixed model" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed model" />
+    <MESSAGE value="crate textModel into LineModel and test" />
+    <option name="LAST_COMMIT_MESSAGE" value="crate textModel into LineModel and test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

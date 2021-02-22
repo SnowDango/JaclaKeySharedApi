@@ -16,9 +16,10 @@ describe('borrowed', () => {
     });
     const testText = "かり"
     const model = new LineModel()
-    const {baseStatus,baseText} = await model.textModel(env.LINE_USER_ID,testText)
+    const {baseStatus,baseText,twitterText} = await model.textModel(env.LINE_USER_ID,testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を借りました')
     expect(baseText).toBe(' user: LineUserName \n status: 借りました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("")
   });
 })
 
@@ -31,9 +32,10 @@ describe('opened', () => {
     });
     const testText = "開けました"
     const model = new LineModel()
-    const {baseStatus,baseText} = await model.textModel(env.LINE_USER_ID,testText)
+    const {baseStatus,baseText,twitterText} = await model.textModel(env.LINE_USER_ID,testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を開けました')
     expect(baseText).toBe(' user: LineUserName \n status: 開けました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("開けました")
   });
 })
 
@@ -47,9 +49,10 @@ describe('borrowed and opened', () => {
     });
     const testText = "かりあけ"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を借りて開けました')
     expect(baseText).toBe(' user: LineUserName \n status: 借りて開けました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("開けました")
   })
 })
 
@@ -62,9 +65,10 @@ describe('closed', () => {
     });
     const testText = "研A301の鍵をしめました"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を閉めました')
     expect(baseText).toBe(' user: LineUserName \n status: 閉めました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("閉めました")
   })
 })
 
@@ -77,9 +81,10 @@ describe('opened and closed', () => {
     });
     const testText = "あけてしめました"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を開けて閉めました')
     expect(baseText).toBe(' user: LineUserName \n status: 開けて閉めました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("開けて閉めました")
   })
 })
 
@@ -92,9 +97,10 @@ describe('returned', () => {
     });
     const testText = "かえしました"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を返しました')
     expect(baseText).toBe(' user: LineUserName \n status: 返しました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("")
   })
 })
 
@@ -107,9 +113,10 @@ describe('closed and returned', () => {
     });
     const testText = "しめかえし"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を閉めて返しました')
     expect(baseText).toBe(' user: LineUserName \n status: 閉めて返しました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("閉めました")
   })
 })
 
@@ -122,9 +129,10 @@ describe('all status', () => {
     });
     const testText = "かりあけしめかえし"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を借りて開けて閉めて返しました')
     expect(baseText).toBe(' user: LineUserName \n status: 借りて開けて閉めて返しました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("開けて閉めました")
   })
 })
 
@@ -137,9 +145,10 @@ describe('random text', () => {
     });
     const testText = "今日21:00くらいからdiscordでamong usやるみたいなんで、やりたい方どうぞー\n" + "後輩大歓迎"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('not status')
     expect(baseText).toBe('not text')
+    expect(twitterText).toBe('not text')
   })
 })
 
@@ -152,9 +161,10 @@ describe('take away after 10',() => {
     });
     const testText = "学務課に鍵を返せなかったので、のーだが持って帰ります"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('LineUserNameが鍵を持ち帰りました')
     expect(baseText).toBe(' user: LineUserName \n status: 持ち帰りました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe('not text')
   })
 })
 
@@ -167,9 +177,10 @@ describe('take away before 10', () => {
     });
     const testText = "鍵持ち帰ります"
     const model = new LineModel()
-    const {baseStatus, baseText} = await model.textModel(env.LINE_USER_ID, testText)
+    const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe('LineUserNameが部室の鍵を持ち帰りました')
     expect(baseText).toBe(' user: LineUserName \n status: 持ち帰りました \n data: 2021/02/23(火) 00:30:25')
+    expect(twitterText).toBe("")
   })
 })
 
