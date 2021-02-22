@@ -6,17 +6,16 @@ import {shareTwitter} from "../domain/usercase/ShareTwitter";
 
 export default class LineModel{
 
-  textModel = (userId: string, text: string): void => {
+  textModel = async (userId: string, text: string) => {
     const userName = getUserName(userId)
-    const status = howKeyStatus()
-    const place = whereKey()
-
+    const status = await howKeyStatus(text)
+    const place = await whereKey(text)
 
     // text時の処理
 
   }
 
-  stickerModel = (userId: string, packageId: string, sticker: string): void => {
+  stickerModel = async (userId: string, packageId: string, sticker: string) => {
 
     // sticker時の処理
 

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/insert.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/entity/PatternDB.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,7 @@
       <workItem from="1613548670199" duration="4003000" />
       <workItem from="1613885393534" duration="8788000" />
       <workItem from="1613910626080" duration="14609000" />
-      <workItem from="1613927521603" duration="12060000" />
+      <workItem from="1613927521603" duration="14516000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -315,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613993187301</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fixed lint">
+      <created>1613993478349</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1613993478349</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +347,8 @@
     <MESSAGE value="add variable type PascalCase" />
     <MESSAGE value="add key status search" />
     <MESSAGE value="delete test pg" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete test pg" />
+    <MESSAGE value="fixed lint" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed lint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
