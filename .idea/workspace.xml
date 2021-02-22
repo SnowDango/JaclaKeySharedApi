@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="add test and getUserName">
-      <change afterPath="$PROJECT_DIR$/test/domain/usecase/LineUser.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/usecase/ShareSlack.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/usecase/KeyStatus.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testPg.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/usercase/KeyStatus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/KeyStatus.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +32,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1oQ971DdSJcZ7QuBCAQxOk8MHR4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -99,7 +101,8 @@
       <workItem from="1613321273759" duration="16011000" />
       <workItem from="1613548670199" duration="4003000" />
       <workItem from="1613885393534" duration="8788000" />
-      <workItem from="1613910626080" duration="5876000" />
+      <workItem from="1613910626080" duration="14609000" />
+      <workItem from="1613927521603" duration="11710000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -290,7 +293,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613465374326</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fixed getUserName test">
+      <created>1613917438256</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613917438256</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add variable type PascalCase">
+      <created>1613917559498</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1613917559499</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +326,9 @@
     <MESSAGE value="fixed deploy" />
     <MESSAGE value="fixed controller used model" />
     <MESSAGE value="add test and getUserName" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test and getUserName" />
+    <MESSAGE value="fixed getUserName test" />
+    <MESSAGE value="add variable type PascalCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="add variable type PascalCase" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
