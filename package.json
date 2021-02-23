@@ -54,6 +54,7 @@
     "test": "jest --silent false --verbose false"
   },
   "devDependencies": {
+    "@types/eslint": "^7.2.6",
     "@types/figlet": "^1.2.1"
   }
 }
