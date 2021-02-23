@@ -161,7 +161,7 @@ describe('take away after 10',() => {
     (axios.get as any) = jest.fn(async () => {
       return {status: 200, data: {displayName: testUser}}
     });
-    const testText = "学務課に鍵を返せなかったので、のーだが持って帰ります"
+    const testText = "学務課に鍵を返せなかったので、Userが持って帰ります"
     const {baseStatus, baseText,twitterText} = await model.textModel(env.LINE_USER_ID, testText)
     expect(baseStatus).toBe(`${testUser}が鍵を持ち帰りました`)//部室の鍵か断定出来ない
     expect(baseText).toBe(baseTextFormat("持ち帰りました"))
