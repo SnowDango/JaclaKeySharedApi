@@ -13,7 +13,7 @@ export default class KeyStatusController {
   fromLineText = (userId: string, text: string): void => {
 
     // TODO textの場合の処理
-    this.model.textModel(userId,text)
+    this.model.textModel(userId,text).catch(error => {console.log(error)})
 
     this.response.successRes(200)
   }
@@ -22,7 +22,7 @@ export default class KeyStatusController {
 
     // TODO stickerの場合の処理
 
-    this.model.stickerModel(userId,packageId,stickerId)
+    this.model.stickerModel(userId,packageId,stickerId).catch(error => {console.log(error)})
 
     this.response.successRes(200)
   }

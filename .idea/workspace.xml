@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/insert.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/entity/PatternDB.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
-    </list>
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="add_test" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,7 +93,8 @@
       <workItem from="1613548670199" duration="4003000" />
       <workItem from="1613885393534" duration="8788000" />
       <workItem from="1613910626080" duration="14609000" />
-      <workItem from="1613927521603" duration="14516000" />
+      <workItem from="1613927521603" duration="25707000" />
+      <workItem from="1614010571413" duration="5916000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -324,7 +320,35 @@
       <option name="project" value="LOCAL" />
       <updated>1613993478349</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fixed model">
+      <created>1613999612242</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1613999612242</updated>
+    </task>
+    <task id="LOCAL-00034" summary="crate textModel into LineModel and test">
+      <created>1614011932192</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1614011932192</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add twitterText into LineModel and test">
+      <created>1614014002006</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1614014002006</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fixed model test">
+      <created>1614063586313</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1614063586313</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +372,11 @@
     <MESSAGE value="add key status search" />
     <MESSAGE value="delete test pg" />
     <MESSAGE value="fixed lint" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed lint" />
+    <MESSAGE value="fixed model" />
+    <MESSAGE value="crate textModel into LineModel and test" />
+    <MESSAGE value="add twitterText into LineModel and test" />
+    <MESSAGE value="fixed model test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed model test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
