@@ -14,7 +14,7 @@ const baseStatusFormat = (status:string): string => {
   return `${testUser}が部室の鍵を${status}`
 }
 const baseTextFormat = (status:string): string => {
-  return ` user: LineUserName \n status: ${status} \n data: 2021/02/23(火) 00:30:25`
+  return ` user: LineUserName \n status: ${status} \n data: 2021/02/20(土) 00:00:00`
 }
 const notStatusText = 'not status'
 const notTextText = 'not text'
@@ -22,7 +22,7 @@ const notTextText = 'not text'
 describe('borrowed', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{status: 1,index: 0}]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -37,7 +37,7 @@ describe('borrowed', () => {
 describe('opened', () => {
   afterEach( () => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{status: 2,index: 0}]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -53,7 +53,7 @@ describe('opened', () => {
 describe('borrowed and opened', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 1},{index: 2,status: 2}]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -68,7 +68,7 @@ describe('borrowed and opened', () => {
 describe('closed', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{index: 9,status: 3}]));
     (whereKey as any) = jest.fn( async () => ([{index: 0,place: "部室"}]));
@@ -83,7 +83,7 @@ describe('closed', () => {
 describe('opened and closed', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 2},{index: 3,status: 3}]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -98,7 +98,7 @@ describe('opened and closed', () => {
 describe('returned', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 4}]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -113,7 +113,7 @@ describe('returned', () => {
 describe('closed and returned', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 3},{index: 2,status: 4}]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -128,7 +128,7 @@ describe('closed and returned', () => {
 describe('all status', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 1},{index: 2,status: 2},{index: 4,status: 3},{index: 6,status: 4}]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -143,7 +143,7 @@ describe('all status', () => {
 describe('random text', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -158,7 +158,7 @@ describe('random text', () => {
 describe('take away after 10',() => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{index: 20,status: 5}]));
     (whereKey as any) = jest.fn( async () => ([]));
@@ -173,7 +173,7 @@ describe('take away after 10',() => {
 describe('take away before 10', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
-    MockDate.set(testDate);
+    MockDate.set(new Date('2/20/2021'));
     (getUserName as any) = jest.fn( async () => ("LineUserName"));
     (howKeyStatus as any) = jest.fn( async () => ([{index: 1,status: 5}]));
     (whereKey as any) = jest.fn( async () => ([]));

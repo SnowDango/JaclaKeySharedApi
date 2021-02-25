@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/usecase/KeyStatus.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/usecase/KeyStatus.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LineModel.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/LineModel.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +100,7 @@
       <workItem from="1613927521603" duration="25707000" />
       <workItem from="1614010571413" duration="5916000" />
       <workItem from="1614090341157" duration="11975000" />
+      <workItem from="1614268987790" duration="651000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -396,14 +396,20 @@
       <option name="project" value="LOCAL" />
       <updated>1614266617929</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="fixed test add mock">
+      <created>1614269162525</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1614269162525</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add build.yml create dotenv" />
     <MESSAGE value="eslintの改善" />
     <MESSAGE value="add HEROKUへの自動deploy" />
     <MESSAGE value="add HEROKUへの自動deploy時のversion指定" />
@@ -428,7 +434,8 @@
     <MESSAGE value="add PR時にtestの実行" />
     <MESSAGE value="fixed actions .env" />
     <MESSAGE value="fixed controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed controller" />
+    <MESSAGE value="fixed test add mock" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed test add mock" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
