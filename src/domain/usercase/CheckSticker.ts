@@ -16,9 +16,8 @@ export const StickerIds = {
 }
 
 export const checkSticker = (packageId: string, stickerId: string):number => {
-
   if(packageId === env.LINE_STICKER_PACKAGE_ID){
-    switch (stickerId) {
+    switch (stickerId){
       case StickerIds.borrowed: {
         return 1
       }

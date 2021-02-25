@@ -22,7 +22,7 @@ module.exports = {
   rules: {
     "no-var": 2, // varの禁止
     "block-spacing": 1, // 単一行ブロックで内側スペースの挿入を強制
-    "indent": [2 , 2], // intentを2
+    "indent": ["error", 2, {"SwitchCase": 1}], // intentを2
     "no-trailing-spaces": 2, // 行の末尾へのスペースの付与を禁止
     "space-infix-ops": 1, // 演算子の前後にスペースを強制
     "dot-notation": 1, // ドット表記可能な場合にドット表記を強制

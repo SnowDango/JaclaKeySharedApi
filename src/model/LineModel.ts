@@ -41,7 +41,7 @@ export default class LineModel{
     const statuses: Status[] = await howKeyStatus(text)
     const places: Place[] = await whereKey(text)
 
-    if (statuses.filter(data => (data.status === 5)).length !== 0){　// 持ち帰った場合
+    if (statuses.filter(data => (data.status === 5)).length !== 0){ // 持ち帰った場合
       return {
         baseStatus: `${userName}が鍵を持ち帰りました`,
         baseText: ` user: ${userName} \n` +
@@ -62,25 +62,9 @@ export default class LineModel{
     }
   }
 
-  stickerModel = async (userId: string, packageId: string, sticker: string): Promise<TextModel> => {
-    const userName = await getUserName(userId)
-    const status = checkSticker(packageId,sticker)
+  /*stickerModel = async (userId: string, packageId: string, sticker: string): Promise<TextModel> => {
 
-    if (status === 0) {
-      return {
-        baseStatus: '',
-        baseText: '',
-        twitterText: ''
-      }
-    }else {
-      return {
-        baseStatus: '',
-          baseText: '',
-          twitterText: ''
-      }
-    }
-
-  }
+  }*/
 
   private createTextModel = (userName: string,statuses: Status[], places: Place[]): TextModel => {
 
@@ -96,7 +80,7 @@ export default class LineModel{
         const placeData = places.find(data => (data.index < status.index && data.index > statuses[index - 1].index))
         if (placeData !== undefined) { // 場所情報が鍵情報に挟まれているとき
           resStatus.push(`${placeData.place}の鍵を`)
-        } else { //　挟まれていないとき
+        } else { // 挟まれていないとき
           if(twitterTexts[twitterTexts.length - 1] === STATUS_STRING[1] ||
             twitterTexts[twitterTexts.length - 1] === STATUS_STRING[2] ) twitterTexts.push("て")
           resStatus.push("て")
