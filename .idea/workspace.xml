@@ -96,7 +96,7 @@
       <workItem from="1613910626080" duration="14609000" />
       <workItem from="1613927521603" duration="25707000" />
       <workItem from="1614010571413" duration="5916000" />
-      <workItem from="1614090341157" duration="9211000" />
+      <workItem from="1614090341157" duration="9465000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -378,14 +378,20 @@
       <option name="project" value="LOCAL" />
       <updated>1614265882419</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="fixed actions .env">
+      <created>1614266354248</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1614266354248</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update README.md" />
     <MESSAGE value="add test: cording check and build test" />
     <MESSAGE value="add build.yml create dotenv" />
     <MESSAGE value="eslintの改善" />
@@ -410,7 +416,8 @@
     <MESSAGE value="fixed model and model test" />
     <MESSAGE value="fixed CheckSticker.ts" />
     <MESSAGE value="add PR時にtestの実行" />
-    <option name="LAST_COMMIT_MESSAGE" value="add PR時にtestの実行" />
+    <MESSAGE value="fixed actions .env" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed actions .env" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
