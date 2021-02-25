@@ -1,7 +1,8 @@
 import LineModel,{TextModel} from "../../src/model/LineModel";
 import {load} from "ts-dotenv";
 import MockDate from 'mockdate'
-import axios from "axios";
+import {getUserName} from '../../src/domain/usercase/LineUser';
+import {howKeyStatus,whereKey} from '../../src/domain/usercase/KeyStatus';
 
 const env = load({ LINE_USER_ID: String})
 const testDate = 1614007825481
@@ -22,9 +23,9 @@ describe('borrowed', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn( async () => {
-      return {status: 200,data:{displayName: testUser}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{status: 1,index: 0}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "かり"
     const result: TextModel = await model.textModel(env.LINE_USER_ID,testText)
     expect(result.baseStatus).toBe(baseStatusFormat("借りました"))
@@ -37,9 +38,9 @@ describe('opened', () => {
   afterEach( () => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn( async () => {
-      return {status: 200,data:{displayName: testUser}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{status: 2,index: 0}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "開けました"
     const result: TextModel = await model.textModel(env.LINE_USER_ID,testText)
     expect(result.baseStatus).toBe(baseStatusFormat("開けました"))
@@ -53,9 +54,9 @@ describe('borrowed and opened', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: "LineUserName"}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 1},{index: 2,status: 2}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "かりあけ"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(baseStatusFormat("借りて開けました"))
@@ -68,9 +69,9 @@ describe('closed', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: testUser}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{index: 9,status: 3}]));
+    (whereKey as any) = jest.fn( async () => ([{index: 0,place: "部室"}]));
     const testText = "研A301の鍵をしめました"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(baseStatusFormat("閉めました"))
@@ -83,9 +84,9 @@ describe('opened and closed', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: testUser}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 2},{index: 3,status: 3}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "あけてしめました"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(baseStatusFormat("開けて閉めました"))
@@ -98,9 +99,9 @@ describe('returned', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: testUser}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 4}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "かえしました"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(baseStatusFormat("返しました"))
@@ -113,9 +114,9 @@ describe('closed and returned', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: "LineUserName"}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 3},{index: 2,status: 4}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "しめかえし"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(baseStatusFormat("閉めて返しました"))
@@ -128,9 +129,9 @@ describe('all status', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: testUser}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{index: 0,status: 1},{index: 2,status: 2},{index: 4,status: 3},{index: 6,status: 4}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "かりあけしめかえし"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(baseStatusFormat("借りて開けて閉めて返しました"))
@@ -143,9 +144,9 @@ describe('random text', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: testUser}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "今日21:00くらいからdiscordでamong usやるみたいなんで、やりたい方どうぞー\n" + "後輩大歓迎"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(notStatusText)
@@ -158,9 +159,9 @@ describe('take away after 10',() => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: testUser}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{index: 20,status: 5}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "学務課に鍵を返せなかったので、Userが持って帰ります"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(`${testUser}が鍵を持ち帰りました`)//部室の鍵か断定出来ない
@@ -173,9 +174,9 @@ describe('take away before 10', () => {
   afterEach(() => {jest.restoreAllMocks()})
   it('should status and text is base format', async () => {
     MockDate.set(testDate);
-    (axios.get as any) = jest.fn(async () => {
-      return {status: 200, data: {displayName: "LineUserName"}}
-    });
+    (getUserName as any) = jest.fn( async () => ("LineUserName"));
+    (howKeyStatus as any) = jest.fn( async () => ([{index: 1,status: 5}]));
+    (whereKey as any) = jest.fn( async () => ([]));
     const testText = "鍵持ち帰ります"
     const result: TextModel = await model.textModel(env.LINE_USER_ID, testText)
     expect(result.baseStatus).toBe(`${testUser}が鍵を持ち帰りました`)
