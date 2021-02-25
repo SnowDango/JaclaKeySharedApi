@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import 'dayjs/locale/ja';
-import {Observable,Subscribable} from 'rxjs'
+import {Observable} from 'rxjs'
 
 import {shareSlack} from '../domain/usercase/ShareSlack'
 import {shareDiscord} from "../domain/usercase/ShareDiscord";
@@ -36,35 +36,60 @@ export type Place = {
 
 export default class LineModel{
 
-  textModel = async (userId: string, text: string): Promise<TextModel> => {
+  textModel = async (userId: string, text: string): Promise<boolean> => {
     const userName = await getUserName(userId)
     const statuses: Status[] = await howKeyStatus(text)
     const places: Place[] = await whereKey(text)
 
     if (statuses.filter(data => (data.status === 5)).length !== 0){ // 持ち帰った場合
-      return {
+      this.share({
         baseStatus: `${userName}が鍵を持ち帰りました`,
         baseText: ` user: ${userName} \n` +
           ` status: 持ち帰りました \n` +
           ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
         twitterText: 'not text'
-      }
+      })
+      return true
     }
 
     if (statuses.filter(data => (data.index < 10)).length === 0) { // 鍵情報の可能性が薄い場合
-      return ({
-        baseStatus: "not status",
-        baseText: "not text",
-        twitterText: "not text"
-      });
+      return false;
     }else {
-      return this.createTextModel(userName,statuses,places)
+      this.share(this.createTextModel(userName,statuses,places))
+      return true;
     }
   }
 
-  /*stickerModel = async (userId: string, packageId: string, sticker: string): Promise<TextModel> => {
+  stickerModel = async (userId: string, packageId: string, stickerId: string): Promise<boolean> => {
+    const user = await getUserName(userId)
+    const stickerCode = checkSticker(packageId,stickerId)
 
-  }*/
+    if(stickerCode === 0){
+      return false;
+    }
+
+    switch (stickerCode) {
+      case 2 || 3:
+        this.share({
+          baseStatus: `${user}が鍵を${STATUS_STRING[stickerCode-1]}ました。`,
+          baseText: ` user: ${user} \n` +
+            ` status: ${STATUS_STRING[stickerCode-1]}ました \n` +
+            ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
+          twitterText: `${STATUS_STRING[stickerCode-1]}ました`
+        })
+        break;
+      case 1 || 4:
+        this.share({
+          baseStatus: `${user}が鍵を${STATUS_STRING[stickerCode-1]}ました。`,
+          baseText: ` user: ${user} \n` +
+            ` status: ${STATUS_STRING[stickerCode-1]}ました \n` +
+            ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
+          twitterText: 'not text'
+        })
+        break;
+    }
+    return true;
+  }
 
   private createTextModel = (userName: string,statuses: Status[], places: Place[]): TextModel => {
 
@@ -113,6 +138,47 @@ export default class LineModel{
     }
   }
 
-  /*private share = (observable: Observable): number => {
-  }*/
+  private share = (textModel: TextModel) => {
+    const clearList: null[] = []
+    const observable = new Observable(subscriber => {
+      const resultCodeCheck = (code: number,target: string) => {
+        switch (code) {
+          case 200 || 204:
+            subscriber.next(`${target} is success`)
+            if(clearList.length === 3) subscriber.complete()
+            break;
+          case 300:
+            subscriber.next("should not shared")
+            if(clearList.length === 3) subscriber.complete()
+            break;
+          case 404:
+            subscriber.error(target)
+            break;
+        }
+      }
+      shareDiscord(textModel.baseStatus, textModel.baseText).then(data => {
+        resultCodeCheck(data,"discord")
+      }).catch(error => {
+        subscriber.error("discord")
+      })
+      shareSlack(textModel.baseStatus, textModel.baseText).then(data => {
+        resultCodeCheck(data,"slack")
+      }).catch(error => {
+        subscriber.error("slack")
+      })
+      shareTwitter(textModel.twitterText).then(data => {
+        resultCodeCheck(data,"twitter")
+      }).catch(error => {
+        subscriber.error("twitter")
+      })
+    })
+    observable.subscribe({
+      next(target) {
+        clearList.push(null)
+        console.log(target)
+      },
+      error(target: string) { console.log(`${target} is error`) },
+      complete() { console.log("all shared") }
+    })
+  }
 }

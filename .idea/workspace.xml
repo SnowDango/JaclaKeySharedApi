@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/usecase/KeyStatus.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/usecase/KeyStatus.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/LineModel.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/LineModel.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +105,7 @@
       <workItem from="1614010571413" duration="5916000" />
       <workItem from="1614090341157" duration="11975000" />
       <workItem from="1614268987790" duration="2253000" />
+      <workItem from="1614279057421" duration="965000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
