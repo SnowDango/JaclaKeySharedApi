@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/usecase/KeyStatus.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/usecase/KeyStatus.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/LineModel.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/LineModel.test.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +57,7 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_interpreter_path" value="/usr/local/Cellar/node/15.8.0/bin/node" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -77,6 +81,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Jest.basic" />
+        <item itemvalue="Jest.basic" />
       </list>
     </recent_temporary>
   </component>
@@ -95,6 +100,8 @@
       <workItem from="1613910626080" duration="14609000" />
       <workItem from="1613927521603" duration="25707000" />
       <workItem from="1614010571413" duration="5916000" />
+      <workItem from="1614090341157" duration="11975000" />
+      <workItem from="1614268987790" duration="2253000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -348,17 +355,69 @@
       <option name="project" value="LOCAL" />
       <updated>1614063586313</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="add shared twitter">
+      <created>1614154828406</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1614154828406</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixed model and model test">
+      <created>1614264756633</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1614264756633</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fixed CheckSticker.ts">
+      <created>1614265367522</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1614265367522</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add PR時にtestの実行">
+      <created>1614265882419</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1614265882419</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fixed actions .env">
+      <created>1614266354248</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1614266354248</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fixed controller">
+      <created>1614266617929</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1614266617929</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fixed test add mock">
+      <created>1614269162525</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1614269162525</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fixed test mockdate">
+      <created>1614269706871</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1614269706871</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update README.md" />
-    <MESSAGE value="add test: cording check and build test" />
-    <MESSAGE value="add build.yml create dotenv" />
-    <MESSAGE value="eslintの改善" />
     <MESSAGE value="add HEROKUへの自動deploy" />
     <MESSAGE value="add HEROKUへの自動deploy時のversion指定" />
     <MESSAGE value="fixed Heroku Deploy" />
@@ -376,7 +435,15 @@
     <MESSAGE value="crate textModel into LineModel and test" />
     <MESSAGE value="add twitterText into LineModel and test" />
     <MESSAGE value="fixed model test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed model test" />
+    <MESSAGE value="add shared twitter" />
+    <MESSAGE value="fixed model and model test" />
+    <MESSAGE value="fixed CheckSticker.ts" />
+    <MESSAGE value="add PR時にtestの実行" />
+    <MESSAGE value="fixed actions .env" />
+    <MESSAGE value="fixed controller" />
+    <MESSAGE value="fixed test add mock" />
+    <MESSAGE value="fixed test mockdate" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed test mockdate" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

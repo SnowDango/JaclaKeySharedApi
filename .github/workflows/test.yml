@@ -1,6 +1,4 @@
-
-
-name: Build
+name: Test
 
 on: pull_request
 
@@ -23,5 +21,4 @@ jobs:
       - name: Create dotenv
         run: echo "${{ secrets.ENV }}" > .env
       - name: buiding check
-        run: yarn debug
-
+        run: yarn test
