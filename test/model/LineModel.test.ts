@@ -5,7 +5,6 @@ import {getUserName} from '../../src/domain/usercase/LineUser';
 import {howKeyStatus,whereKey} from '../../src/domain/usercase/KeyStatus';
 
 const env = load({ LINE_USER_ID: String})
-const testDate = 1614007825481
 const testUser = "LineUserName"
 
 const model = new LineModel()
