@@ -19,6 +19,6 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: Create dotenv
-        run: echo "${{ secrets.LINE }}" > .env
+        run: echo "${{ secrets.ENV }}" > .env
       - name: buiding check
         run: yarn test
