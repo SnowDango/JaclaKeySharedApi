@@ -29,4 +29,4 @@ app.use(router)
 app.listen(port, startedFunc)
 
 // discordへのlogin
-client.login(env.DISCORD_TOKEN)
+client.login(env.DISCORD_TOKEN).catch(console.log)

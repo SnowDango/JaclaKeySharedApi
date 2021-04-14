@@ -4,6 +4,8 @@ import MockDate from 'mockdate'
 import {getUserName} from '../../src/domain/usercase/LineUser';
 import {howKeyStatus, whereKey} from '../../src/domain/usercase/KeyStatus';
 import {shareTwitter} from "../../src/domain/usercase/ShareTwitter";
+import {shareDiscord} from "../../src/domain/usercase/ShareDiscord";
+import {shareSlack} from "../../src/domain/usercase/ShareSlack";
 
 const env = load({
   LINE_USER_ID: String,
@@ -16,10 +18,15 @@ const env = load({
 
 const model = new LineModel();
 
+//init mock
 MockDate.set(new Date('2/20/2021'));
 (getUserName as any) = jest.fn(async () => ("LineUserName"));
-//(shareSlack as any) = jest.fn( async () => (200));
-//(shareDiscord as any) = jest.fn( async () => (204));
+(shareDiscord as any) = jest.fn(async () => {
+  return {status: 204}
+});
+(shareSlack as any) = jest.fn(async () => {
+  return {status: 200}
+});
 
 describe('borrowed', () => {
   afterEach(() => {
