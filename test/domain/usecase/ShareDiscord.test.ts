@@ -3,12 +3,11 @@ import {shareDiscord} from '../../../src/domain/usercase/ShareDiscord'
 
 jest.mock('axios')
 
-
-describe('discordのpostTest',()=> {
+describe('discordのpostTest', () => {
   afterEach(() => jest.restoreAllMocks())
-  it('should res code 204',async () =>{
+  it('should res code 204', async () => {
     (axios.post as any) = jest.fn(async () => {
-      return {status:204}
+      return {status: 204}
     })
     const data = await shareDiscord("jest test", "jestによるtestです")
     expect(data).toBe(204)
