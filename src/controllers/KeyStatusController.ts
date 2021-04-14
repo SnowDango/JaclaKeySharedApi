@@ -22,7 +22,7 @@ export default class KeyStatusController {
 
     // TODO stickerの場合の処理
 
-    // this.model.stickerModel(userId,packageId,stickerId).catch(error => {console.log(error)})
+    this.model.stickerModel(userId,packageId,stickerId).catch(error => {console.log(error)})
 
     this.response.successRes(200)
   }

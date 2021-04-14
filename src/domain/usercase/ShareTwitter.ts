@@ -16,10 +16,16 @@ const twitterClient = new TwitterApi({
 });
 
 export const shareTwitter = async (baseStatus: string): Promise<number> => {
-  const result =  await twitterClient.v1.tweet(baseStatus).catch(error => {return {text: "error"}})
-  if(result.text === baseStatus){
-    return 200
+  if(baseStatus === 'not text') {
+    const result = await twitterClient.v1.tweet(baseStatus).catch(error => {
+      return {text: "error"}
+    })
+    if (result.text === baseStatus) {
+      return 200
+    } else {
+      return 404
+    }
   }else{
-    return 404
+    return 300
   }
 }
