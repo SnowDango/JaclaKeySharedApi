@@ -1,8 +1,10 @@
 import {Router} from "express";
 import KeyStatusController from "../controllers/KeyStatusController"
+import Discord, {Client} from "discord.js";
+import DbUpdateController from "../controllers/DbUpdateController";
 
 export const router: Router = Router()
-router.post('/fromLine',(req, res) => {
+router.post('/fromLine', (req, res) => {
 
   const controller = new KeyStatusController(res)
 
@@ -10,18 +12,26 @@ router.post('/fromLine',(req, res) => {
   const messageType: string = body.events[0].type
   const userId = body.events[0].source.userId
 
-  if(messageType === "text"){ // messagePatternがTextの時
+  if (messageType === "text") { // messagePatternがTextの時
 
     const text = body.events[0].text
-    controller.fromLineText(userId,text)
+    controller.fromLineText(userId, text)
 
-  }else if(messageType === "sticker"){ // messagePatternがstickerの時
+  } else if (messageType === "sticker") { // messagePatternがstickerの時
 
     const packageId = body.events[0].packageId
     const stickerId = body.events[0].stickerId
-    controller.fromLineSticker(userId,packageId,stickerId)
+    controller.fromLineSticker(userId, packageId, stickerId)
 
   }
+})
+
+export const client: Client = new Discord.Client()
+client.on("ready", () => {
+  console.log(`${client.user?.tag} でログインしてます。`)
+})
+client.on("message", msg => {
+  const controller = new DbUpdateController()
 })
 
 /* LineからのpostData(多分あってるはず)

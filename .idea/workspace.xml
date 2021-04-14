@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="delete LineModel ConsoleLog">
+      <change afterPath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/DbUpdateModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareSlack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/usecase/ShareSlack.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/usecase/ShareSlack.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/LineModel.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/LineModel.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/Router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="share_status" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
