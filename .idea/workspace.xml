@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/LineModel.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/LineModel.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,8 @@
       <workItem from="1614010571413" duration="5916000" />
       <workItem from="1614090341157" duration="11975000" />
       <workItem from="1614268987790" duration="2253000" />
-      <workItem from="1614279057421" duration="965000" />
+      <workItem from="1614279057421" duration="1349000" />
+      <workItem from="1614315685064" duration="49000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1613325647711</created>
@@ -415,14 +411,20 @@
       <option name="project" value="LOCAL" />
       <updated>1614269706871</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="add sticker model">
+      <created>1614280182142</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1614280182142</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add HEROKUへの自動deploy" />
     <MESSAGE value="add HEROKUへの自動deploy時のversion指定" />
     <MESSAGE value="fixed Heroku Deploy" />
     <MESSAGE value="add jest" />
@@ -447,7 +449,8 @@
     <MESSAGE value="fixed controller" />
     <MESSAGE value="fixed test add mock" />
     <MESSAGE value="fixed test mockdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed test mockdate" />
+    <MESSAGE value="add sticker model" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sticker model" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

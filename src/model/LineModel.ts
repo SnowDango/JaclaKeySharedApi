@@ -175,7 +175,6 @@ export default class LineModel{
     observable.subscribe({
       next(target) {
         clearList.push(null)
-        console.log(target)
       },
       error(target: string) { console.log(`${target} is error`) },
       complete() { console.log("all shared") }
