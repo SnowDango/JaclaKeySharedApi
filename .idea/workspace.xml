@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PlaceDbUpdateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PlaceDbUpdateModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StatusDbUpdateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StatusDbUpdateModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routers/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/Router.ts" afterDir="false" />
-    </list>
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="share_status" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -450,14 +439,20 @@
       <option name="project" value="LOCAL" />
       <updated>1618429513960</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="codeの整理">
+      <created>1618466012418</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1618466012418</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add deploy" />
     <MESSAGE value="fixed deploy" />
     <MESSAGE value="fixed controller used model" />
     <MESSAGE value="add test and getUserName" />
@@ -482,7 +477,8 @@
     <MESSAGE value="delete LineModel ConsoleLog" />
     <MESSAGE value="discord bot login" />
     <MESSAGE value="shareDiscordをaxiosからdiscord.jsに変更" />
-    <option name="LAST_COMMIT_MESSAGE" value="shareDiscordをaxiosからdiscord.jsに変更" />
+    <MESSAGE value="codeの整理" />
+    <option name="LAST_COMMIT_MESSAGE" value="codeの整理" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
