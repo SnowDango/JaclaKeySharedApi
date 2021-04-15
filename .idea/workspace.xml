@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/KeyStatusController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/LineUser.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareDiscord.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/LineModel.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/LineModel.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/ShareTwitter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PlaceDbUpdateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PlaceDbUpdateModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/StatusDbUpdateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StatusDbUpdateModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/Router.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -439,14 +443,20 @@
       <option name="project" value="LOCAL" />
       <updated>1618417370046</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="shareDiscordをaxiosからdiscord.jsに変更">
+      <created>1618429513960</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1618429513960</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add jest" />
     <MESSAGE value="add deploy" />
     <MESSAGE value="fixed deploy" />
     <MESSAGE value="fixed controller used model" />
@@ -471,7 +481,8 @@
     <MESSAGE value="add sticker model" />
     <MESSAGE value="delete LineModel ConsoleLog" />
     <MESSAGE value="discord bot login" />
-    <option name="LAST_COMMIT_MESSAGE" value="discord bot login" />
+    <MESSAGE value="shareDiscordをaxiosからdiscord.jsに変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="shareDiscordをaxiosからdiscord.jsに変更" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

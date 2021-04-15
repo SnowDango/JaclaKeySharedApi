@@ -28,7 +28,9 @@ router.post('/fromLine', (req, res) => {
 
 export const client: Client = new Discord.Client()
 client.on("ready", () => {
-  console.log(`${client.user?.tag} でログインしてます。`)
+  if (client.user !== null) {
+    console.log(`${client.user.tag} でログインしてます。`)
+  }
 })
 client.on("message", msg => {
   const controller = new DbUpdateController()

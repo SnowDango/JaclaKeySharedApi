@@ -9,7 +9,7 @@ import {howKeyStatus, whereKey} from "../domain/usercase/KeyStatus";
 import {shareTwitter} from "../domain/usercase/ShareTwitter";
 import {checkSticker} from "../domain/usercase/CheckSticker";
 
-const STATUS_STRING = ["借り","開け","閉め","返し","持ち帰り"];
+const STATUS_STRING = ["借り", "開け", "閉め", "返し", "持ち帰り"];
 
 const STATUS_TYPE = {
   borrowed: 1,
@@ -34,14 +34,14 @@ export type Place = {
   place: string
 }
 
-export default class LineModel{
+export default class LineModel {
 
   textModel = async (userId: string, text: string): Promise<boolean> => {
     const userName = await getUserName(userId)
     const statuses: Status[] = await howKeyStatus(text)
     const places: Place[] = await whereKey(text)
 
-    if (statuses.filter(data => (data.status === 5)).length !== 0){ // 持ち帰った場合
+    if (statuses.filter(data => (data.status === 5)).length !== 0) { // 持ち帰った場合
       this.share({
         baseStatus: `${userName}が鍵を持ち帰りました`,
         baseText: ` user: ${userName} \n` +
@@ -54,35 +54,35 @@ export default class LineModel{
 
     if (statuses.filter(data => (data.index < 10)).length === 0) { // 鍵情報の可能性が薄い場合
       return false;
-    }else {
-      this.share(this.createTextModel(userName,statuses,places))
+    } else {
+      this.share(this.createTextModel(userName, statuses, places))
       return true;
     }
   }
 
   stickerModel = async (userId: string, packageId: string, stickerId: string): Promise<boolean> => {
     const user = await getUserName(userId)
-    const stickerCode = checkSticker(packageId,stickerId)
+    const stickerCode = checkSticker(packageId, stickerId)
 
-    if(stickerCode === 0){
+    if (stickerCode === 0) {
       return false;
     }
 
     switch (stickerCode) {
       case 2 || 3:
         this.share({
-          baseStatus: `${user}が鍵を${STATUS_STRING[stickerCode-1]}ました。`,
+          baseStatus: `${user}が鍵を${STATUS_STRING[stickerCode - 1]}ました。`,
           baseText: ` user: ${user} \n` +
-            ` status: ${STATUS_STRING[stickerCode-1]}ました \n` +
+            ` status: ${STATUS_STRING[stickerCode - 1]}ました \n` +
             ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
-          twitterText: `${STATUS_STRING[stickerCode-1]}ました`
+          twitterText: `${STATUS_STRING[stickerCode - 1]}ました`
         })
         break;
       case 1 || 4:
         this.share({
-          baseStatus: `${user}が鍵を${STATUS_STRING[stickerCode-1]}ました。`,
+          baseStatus: `${user}が鍵を${STATUS_STRING[stickerCode - 1]}ました。`,
           baseText: ` user: ${user} \n` +
-            ` status: ${STATUS_STRING[stickerCode-1]}ました \n` +
+            ` status: ${STATUS_STRING[stickerCode - 1]}ました \n` +
             ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
           twitterText: 'not text'
         })
@@ -91,7 +91,7 @@ export default class LineModel{
     return true;
   }
 
-  private createTextModel = (userName: string,statuses: Status[], places: Place[]): TextModel => {
+  private createTextModel = (userName: string, statuses: Status[], places: Place[]): TextModel => {
 
     const resStatus: string[] = [`${userName}が`]
     const resTexts: string[] = []
@@ -106,8 +106,8 @@ export default class LineModel{
         if (placeData !== undefined) { // 場所情報が鍵情報に挟まれているとき
           resStatus.push(`${placeData.place}の鍵を`)
         } else { // 挟まれていないとき
-          if(twitterTexts[twitterTexts.length - 1] === STATUS_STRING[1] ||
-            twitterTexts[twitterTexts.length - 1] === STATUS_STRING[2] ) twitterTexts.push("て")
+          if (twitterTexts[twitterTexts.length - 1] === STATUS_STRING[1] ||
+            twitterTexts[twitterTexts.length - 1] === STATUS_STRING[2]) twitterTexts.push("て")
           resStatus.push("て")
           resTexts.push("て")
         }
@@ -122,8 +122,8 @@ export default class LineModel{
       resStatus.push(STATUS_STRING[status.status - 1])
       resTexts.push(STATUS_STRING[status.status - 1])
     })
-    if(twitterTexts.length !== 0) {
-      if(twitterTexts[twitterTexts.length - 1] === "て") twitterTexts.splice(twitterTexts.length-1,1)
+    if (twitterTexts.length !== 0) {
+      if (twitterTexts[twitterTexts.length - 1] === "て") twitterTexts.splice(twitterTexts.length - 1, 1)
       twitterTexts.push("ました")
     }
     resStatus.push("ました")
@@ -141,15 +141,15 @@ export default class LineModel{
   private share = (textModel: TextModel) => {
     const clearList: null[] = []
     const observable = new Observable(subscriber => {
-      const resultCodeCheck = (code: number,target: string) => {
+      const resultCodeCheck = (code: number, target: string) => {
         switch (code) {
           case 200 || 204:
             subscriber.next(`${target} is success`)
-            if(clearList.length === 3) subscriber.complete()
+            if (clearList.length === 3) subscriber.complete()
             break;
           case 300:
             subscriber.next("should not shared")
-            if(clearList.length === 3) subscriber.complete()
+            if (clearList.length === 3) subscriber.complete()
             break;
           case 404:
             subscriber.error(target)
@@ -157,17 +157,17 @@ export default class LineModel{
         }
       }
       shareDiscord(textModel.baseStatus, textModel.baseText).then(data => {
-        resultCodeCheck(data,"discord")
+        resultCodeCheck(data, "discord")
       }).catch(error => {
         subscriber.error("discord")
       })
       shareSlack(textModel.baseStatus, textModel.baseText).then(data => {
-        resultCodeCheck(data,"slack")
+        resultCodeCheck(data, "slack")
       }).catch(error => {
         subscriber.error("slack")
       })
       shareTwitter(textModel.twitterText).then(data => {
-        resultCodeCheck(data,"twitter")
+        resultCodeCheck(data, "twitter")
       }).catch(error => {
         subscriber.error("twitter")
       })
@@ -176,8 +176,12 @@ export default class LineModel{
       next(target) {
         clearList.push(null)
       },
-      error(target: string) { console.log(`${target} is error`) },
-      complete() { console.log("all shared") }
+      error(target: string) {
+        console.log(`${target} is error`)
+      },
+      complete() {
+        console.log("all shared")
+      }
     })
   }
 }

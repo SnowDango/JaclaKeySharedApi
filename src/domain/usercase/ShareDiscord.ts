@@ -19,5 +19,4 @@ export const shareDiscord = async (baseStatus: string, baseText: string): Promis
   } catch (e) {
     return 400
   }
-  
 }

@@ -2,10 +2,10 @@ import TwitterApi from 'twitter-api-v2';
 import {load} from "ts-dotenv";
 
 const env = load({
-  TWITTER_API_KEY:String,
-  TWITTER_API_KEY_SECRET:String,
-  TWITTER_ACCESS_TOKEN:String,
-  TWITTER_ACCESS_TOKEN_SECRET:String
+  TWITTER_API_KEY: String,
+  TWITTER_API_KEY_SECRET: String,
+  TWITTER_ACCESS_TOKEN: String,
+  TWITTER_ACCESS_TOKEN_SECRET: String
 })
 
 const twitterClient = new TwitterApi({
@@ -16,7 +16,7 @@ const twitterClient = new TwitterApi({
 });
 
 export const shareTwitter = async (baseStatus: string): Promise<number> => {
-  if(baseStatus === 'not text') {
+  if (baseStatus === 'not text') {
     const result = await twitterClient.v1.tweet(baseStatus).catch(error => {
       return {text: "error"}
     })
@@ -25,7 +25,7 @@ export const shareTwitter = async (baseStatus: string): Promise<number> => {
     } else {
       return 404
     }
-  }else{
+  } else {
     return 300
   }
 }
