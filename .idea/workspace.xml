@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="node version delete 10.x">
+      <change afterPath="$PROJECT_DIR$/src/data/repository/PermanentCode.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/usercase/UpdatePlaceDb.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/usercase/UpdateStatusDb.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/PlaceUpdateModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/StatusUpdateModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/responses/ResponseDiscord.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PlaceDbUpdateModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/StatusDbUpdateModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/Router.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +48,14 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="SnowDango" />
+        <option name="repository" value="JaclaKeySharedApi" />
+      </RepoCoordinatesHolder>
+    </option>
   </component>
   <component name="ProjectId" id="1oQ971DdSJcZ7QuBCAQxOk8MHR4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -102,13 +127,6 @@
       <workItem from="1614315685064" duration="49000" />
       <workItem from="1618410198229" duration="702000" />
       <workItem from="1618410920379" duration="2053000" />
-    </task>
-    <task id="LOCAL-00001" summary="update README.md">
-      <created>1613325647711</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1613325647711</updated>
     </task>
     <task id="LOCAL-00002" summary="update README.md">
       <created>1613325745351</created>
@@ -446,14 +464,20 @@
       <option name="project" value="LOCAL" />
       <updated>1618466012418</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="node version delete 10.x">
+      <created>1618466458179</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1618466458180</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed deploy" />
     <MESSAGE value="fixed controller used model" />
     <MESSAGE value="add test and getUserName" />
     <MESSAGE value="fixed getUserName test" />
@@ -478,7 +502,8 @@
     <MESSAGE value="discord bot login" />
     <MESSAGE value="shareDiscordをaxiosからdiscord.jsに変更" />
     <MESSAGE value="codeの整理" />
-    <option name="LAST_COMMIT_MESSAGE" value="codeの整理" />
+    <MESSAGE value="node version delete 10.x" />
+    <option name="LAST_COMMIT_MESSAGE" value="node version delete 10.x" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

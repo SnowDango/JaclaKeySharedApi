@@ -8,8 +8,7 @@ import {getUserName} from "../domain/usercase/LineUser";
 import {howKeyStatus, whereKey} from "../domain/usercase/KeyStatus";
 import {shareTwitter} from "../domain/usercase/ShareTwitter";
 import {checkSticker} from "../domain/usercase/CheckSticker";
-
-const STATUS_STRING = ["借り", "開け", "閉め", "返し", "持ち帰り"];
+import {statusString} from "../data/repository/PermanentCode";
 
 const STATUS_TYPE = {
   borrowed: 1,
@@ -71,18 +70,18 @@ export default class LineModel {
     switch (stickerCode) {
       case 2 || 3:
         this.share({
-          baseStatus: `${user}が鍵を${STATUS_STRING[stickerCode - 1]}ました。`,
+          baseStatus: `${user}が鍵を${statusString(stickerCode)}ました。`,
           baseText: ` user: ${user} \n` +
-            ` status: ${STATUS_STRING[stickerCode - 1]}ました \n` +
+            ` status: ${statusString(stickerCode)}ました \n` +
             ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
-          twitterText: `${STATUS_STRING[stickerCode - 1]}ました`
+          twitterText: `${statusString(stickerCode)}ました`
         })
         break;
       case 1 || 4:
         this.share({
-          baseStatus: `${user}が鍵を${STATUS_STRING[stickerCode - 1]}ました。`,
+          baseStatus: `${user}が鍵を${statusString(stickerCode)}ました。`,
           baseText: ` user: ${user} \n` +
-            ` status: ${STATUS_STRING[stickerCode - 1]}ました \n` +
+            ` status: ${statusString(stickerCode)}ました \n` +
             ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
           twitterText: 'not text'
         })
@@ -98,7 +97,6 @@ export default class LineModel {
     const twitterTexts: string[] = []
 
     statuses.forEach((status, index) => {
-
       if (places.length === 0 && index === 0) { // 場所情報がない場合
         resStatus.push("部室の鍵を")
       } else if (index !== 0) { // 場所情報が文字列の先頭じゃない場合
@@ -106,8 +104,8 @@ export default class LineModel {
         if (placeData !== undefined) { // 場所情報が鍵情報に挟まれているとき
           resStatus.push(`${placeData.place}の鍵を`)
         } else { // 挟まれていないとき
-          if (twitterTexts[twitterTexts.length - 1] === STATUS_STRING[1] ||
-            twitterTexts[twitterTexts.length - 1] === STATUS_STRING[2]) twitterTexts.push("て")
+          if (twitterTexts[twitterTexts.length - 1] === statusString(0) ||
+            twitterTexts[twitterTexts.length - 1] === statusString(1)) twitterTexts.push("て")
           resStatus.push("て")
           resTexts.push("て")
         }
@@ -118,9 +116,9 @@ export default class LineModel {
         }
       }
       // 状態の追加
-      if (status.status === STATUS_TYPE.opened || status.status === STATUS_TYPE.closed) twitterTexts.push(STATUS_STRING[status.status - 1])
-      resStatus.push(STATUS_STRING[status.status - 1])
-      resTexts.push(STATUS_STRING[status.status - 1])
+      if (status.status === STATUS_TYPE.opened || status.status === STATUS_TYPE.closed) twitterTexts.push(statusString(status.status))
+      resStatus.push(statusString(status.status))
+      resTexts.push(statusString(status.status))
     })
     if (twitterTexts.length !== 0) {
       if (twitterTexts[twitterTexts.length - 1] === "て") twitterTexts.splice(twitterTexts.length - 1, 1)
@@ -138,7 +136,7 @@ export default class LineModel {
     }
   }
 
-  private share = (textModel: TextModel) => {
+  private share = (textModel: TextModel): void => {
     const clearList: null[] = []
     const observable = new Observable(subscriber => {
       const resultCodeCheck = (code: number, target: string) => {
