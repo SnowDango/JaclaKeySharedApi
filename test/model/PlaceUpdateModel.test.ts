@@ -18,10 +18,6 @@ describe('add place', () => {
     const errorResult: string = await model.updateModel(model.PLACE_COMMAND_TYPE.input, textList);
     expect(errorResult).toEqual("データベースエラーが発生しました");
   })
-  it('should match return text null.', async () => {
-    const notTypeText: string = await model.updateModel(-1, textList);
-    expect(notTypeText).toEqual("")
-  })
 })
 
 describe('remove place', () => {
@@ -38,10 +34,6 @@ describe('remove place', () => {
     (removePlace as any) = jest.fn(async (abbreviation: string): Promise<boolean> => false)
     const errorResult: string = await model.updateModel(model.PLACE_COMMAND_TYPE.remove, textList);
     expect(errorResult).toEqual("データベースエラーが発生しました");
-  })
-  it('should match return text null.', async () => {
-    const notTypeText: string = await model.updateModel(-1, textList);
-    expect(notTypeText).toEqual("")
   })
 })
 
@@ -63,10 +55,6 @@ describe('show place', () => {
     const noDataResult: string = await model.updateModel(model.PLACE_COMMAND_TYPE.show, textList);
     expect(noDataResult).toEqual("場所情報は存在しません");
   })
-  it('should match return text null.', async () => {
-    const notTypeText: string = await model.updateModel(-1, textList);
-    expect(notTypeText).toEqual("")
-  })
 })
 
 describe('error update', () => {
@@ -76,6 +64,10 @@ describe('error update', () => {
     })
     const errorResult: string = await model.updateModel(model.PLACE_COMMAND_TYPE.input, [""]);
     expect(errorResult).toEqual("入力が間違っているかエラーが発生しました")
+  })
+  it('should match return text null.', async () => {
+    const notTypeText: string = await model.updateModel(-1, []);
+    expect(notTypeText).toEqual("")
   })
 })
 

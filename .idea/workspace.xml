@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,36 +69,36 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Jest.error update.should match return error text.">
-    <configuration name="add place.should match return text database info." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.show status.should match return text database error.">
+    <configuration name="add status.should match return text database error." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-file value="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" />
       <test-names>
-        <test-name value="add place" />
-        <test-name value="should match return text database info." />
+        <test-name value="add status" />
+        <test-name value="should match return text database error." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="add place.should match return text null." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="add status.should match return text null." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-file value="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" />
       <test-names>
-        <test-name value="add place" />
+        <test-name value="add status" />
         <test-name value="should match return text null." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="error update.should match return error text." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="error update.should match return text null." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -107,34 +108,34 @@
       <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
       <test-names>
         <test-name value="error update" />
-        <test-name value="should match return error text." />
+        <test-name value="should match return text null." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="show place.should match return error text." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="show status.should match return text database error." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-file value="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" />
       <test-names>
-        <test-name value="show place" />
-        <test-name value="should match return error text." />
+        <test-name value="show status" />
+        <test-name value="should match return text database error." />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="show place.should match return text show text." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="show status.should match return text show text." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-file value="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" />
       <test-names>
-        <test-name value="show place" />
+        <test-name value="show status" />
         <test-name value="should match return text show text." />
       </test-names>
       <method v="2" />
@@ -144,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.error update.should match return error text." />
-        <item itemvalue="Jest.show place.should match return error text." />
-        <item itemvalue="Jest.show place.should match return text show text." />
-        <item itemvalue="Jest.add place.should match return text null." />
-        <item itemvalue="Jest.add place.should match return text database info." />
+        <item itemvalue="Jest.show status.should match return text database error." />
+        <item itemvalue="Jest.show status.should match return text show text." />
+        <item itemvalue="Jest.error update.should match return text null." />
+        <item itemvalue="Jest.add status.should match return text null." />
+        <item itemvalue="Jest.add status.should match return text database error." />
       </list>
     </recent_temporary>
   </component>
@@ -173,13 +174,6 @@
       <workItem from="1614315685064" duration="49000" />
       <workItem from="1618410198229" duration="702000" />
       <workItem from="1618410920379" duration="2053000" />
-    </task>
-    <task id="LOCAL-00003" summary="update README.md">
-      <created>1613325779997</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1613325779997</updated>
     </task>
     <task id="LOCAL-00004" summary="update README.md">
       <created>1613326313870</created>
@@ -517,14 +511,20 @@
       <option name="project" value="LOCAL" />
       <updated>1618565787948</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="add discord db command model test">
+      <created>1618738734339</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1618738734339</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add test and getUserName" />
     <MESSAGE value="fixed getUserName test" />
     <MESSAGE value="add variable type PascalCase" />
     <MESSAGE value="add key status search" />
@@ -549,7 +549,8 @@
     <MESSAGE value="codeの整理" />
     <MESSAGE value="node version delete 10.x" />
     <MESSAGE value="add discord db control command" />
-    <option name="LAST_COMMIT_MESSAGE" value="add discord db control command" />
+    <MESSAGE value="add discord db command model test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add discord db command model test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
