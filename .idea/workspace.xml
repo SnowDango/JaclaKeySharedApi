@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="node version delete 10.x">
-      <change afterPath="$PROJECT_DIR$/src/data/repository/PermanentCode.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/usercase/UpdatePlaceDb.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/usercase/UpdateStatusDb.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/PlaceUpdateModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/StatusUpdateModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/responses/ResponseDiscord.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entity/PlaceDB.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entity/StatusDB.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PlaceDbUpdateModel.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StatusDbUpdateModel.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routers/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/Router.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,17 +68,74 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Jest.basic">
-    <configuration name="basic" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.error update.should match return error text.">
+    <configuration name="add place.should match return text database info." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" />
+      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
       <test-names>
-        <test-name value="basic" />
+        <test-name value="add place" />
+        <test-name value="should match return text database info." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="add place.should match return text null." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-names>
+        <test-name value="add place" />
+        <test-name value="should match return text null." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="error update.should match return error text." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-names>
+        <test-name value="error update" />
+        <test-name value="should match return error text." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="show place.should match return error text." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-names>
+        <test-name value="show place" />
+        <test-name value="should match return error text." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="show place.should match return text show text." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-names>
+        <test-name value="show place" />
+        <test-name value="should match return text show text." />
       </test-names>
       <method v="2" />
     </configuration>
@@ -101,8 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.basic" />
-        <item itemvalue="Jest.basic" />
+        <item itemvalue="Jest.error update.should match return error text." />
+        <item itemvalue="Jest.show place.should match return error text." />
+        <item itemvalue="Jest.show place.should match return text show text." />
+        <item itemvalue="Jest.add place.should match return text null." />
+        <item itemvalue="Jest.add place.should match return text database info." />
       </list>
     </recent_temporary>
   </component>
@@ -127,13 +173,6 @@
       <workItem from="1614315685064" duration="49000" />
       <workItem from="1618410198229" duration="702000" />
       <workItem from="1618410920379" duration="2053000" />
-    </task>
-    <task id="LOCAL-00002" summary="update README.md">
-      <created>1613325745351</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1613325745351</updated>
     </task>
     <task id="LOCAL-00003" summary="update README.md">
       <created>1613325779997</created>
@@ -471,14 +510,20 @@
       <option name="project" value="LOCAL" />
       <updated>1618466458180</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="add discord db control command">
+      <created>1618565787948</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1618565787948</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed controller used model" />
     <MESSAGE value="add test and getUserName" />
     <MESSAGE value="fixed getUserName test" />
     <MESSAGE value="add variable type PascalCase" />
@@ -503,7 +548,8 @@
     <MESSAGE value="shareDiscordをaxiosからdiscord.jsに変更" />
     <MESSAGE value="codeの整理" />
     <MESSAGE value="node version delete 10.x" />
-    <option name="LAST_COMMIT_MESSAGE" value="node version delete 10.x" />
+    <MESSAGE value="add discord db control command" />
+    <option name="LAST_COMMIT_MESSAGE" value="add discord db control command" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
