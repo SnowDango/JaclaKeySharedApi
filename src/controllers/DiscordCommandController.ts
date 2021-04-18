@@ -1,19 +1,10 @@
-import {load} from "ts-dotenv";
+import discordCommand from "./discordCommand.json"
 import PlaceUpdateModel from "../model/PlaceUpdateModel";
 import StatusUpdateModel from "../model/StatusUpdateModel";
 import ResponseDiscord from "../responses/ResponseDiscord";
 import Discord from "discord.js";
 
-const env = load({
-  DISCORD_INPUT_DB_PLACE: String,
-  DISCORD_REMOVE_DB_PLACE: String,
-  DISCORD_SHOW_DB_PLACE: String,
-  DISCORD_INPUT_DB_STATUS: String,
-  DISCORD_REMOVE_DB_STATUS: String,
-  DISCORD_SHOW_DB_STATUS: String
-})
-
-export default class DbUpdateController {
+export default class DiscordCommandController {
 
   response: ResponseDiscord;
   placeModel = new PlaceUpdateModel()
@@ -25,17 +16,17 @@ export default class DbUpdateController {
 
   caseMatch = (command: string): number => {
     switch (command) {
-      case env.DISCORD_INPUT_DB_PLACE:
+      case discordCommand.place.input:
         return this.placeModel.PLACE_COMMAND_TYPE.input
-      case env.DISCORD_REMOVE_DB_PLACE:
+      case discordCommand.place.remove:
         return this.placeModel.PLACE_COMMAND_TYPE.remove
-      case env.DISCORD_SHOW_DB_PLACE:
+      case discordCommand.place.show:
         return this.placeModel.PLACE_COMMAND_TYPE.show
-      case env.DISCORD_INPUT_DB_STATUS:
+      case discordCommand.status.input:
         return this.statusModel.STATUS_COMMAND_TYPE.input
-      case env.DISCORD_REMOVE_DB_STATUS:
+      case discordCommand.status.remove:
         return this.statusModel.STATUS_COMMAND_TYPE.remove
-      case env.DISCORD_SHOW_DB_STATUS:
+      case discordCommand.status.show:
         return this.statusModel.STATUS_COMMAND_TYPE.show
       default:
         return -1

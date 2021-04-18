@@ -1,7 +1,7 @@
 import {Router} from "express";
 import KeyStatusController from "../controllers/KeyStatusController"
 import Discord, {Client, TextChannel} from "discord.js";
-import DbUpdateController from "../controllers/DbUpdateController";
+import DiscordCommandController from "../controllers/DiscordCommandController";
 
 export const router: Router = Router()
 router.post('/fromLine', (req, res) => {
@@ -35,7 +35,7 @@ client.on("ready", () => {
 client.on("message", msg => {
   if (msg.channel instanceof TextChannel) {
     console.log(`TextChannelに${msg.author.username}が${msg.content}と投稿`);
-    const controller = new DbUpdateController(msg.channel);
+    const controller = new DiscordCommandController(msg.channel);
     controller.execute(msg.content).catch(console.log)
   }
 })
