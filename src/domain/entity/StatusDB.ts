@@ -7,7 +7,7 @@ const env = load({
 })
 
 export default class StatusDB {
-  private readonly client:Pool
+  private readonly client: Pool
   public tableName: string = env.DB_TABLE_NAME_STATUS
 
   constructor() {
@@ -26,4 +26,13 @@ export default class StatusDB {
   getAll = async (): Promise<QueryResult> => {
     return await this.client.query(`select * from ${this.tableName} order by status;`)
   }
+
+  insert = async (string: string, status: number): Promise<QueryResult> => {
+    return await this.client.query(`insert into ${this.tableName} values (default,${status},'${string}');`)
+  }
+
+  remove = async (string: string): Promise<QueryResult> => {
+    return await this.client.query(`delete from ${this.tableName} where string='${string}';`)
+  }
+
 }

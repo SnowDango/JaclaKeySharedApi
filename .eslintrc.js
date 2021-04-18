@@ -39,6 +39,7 @@ module.exports = {
     "no-extra-semi": 1, // 不要なセミコロンの記述しないこと
     "no-sparse-arrays": 2, // 配列においてまばらな値設定を行わないこと
     "no-process-env": 1, // process.env は使わないこと
+    "@typescript-eslint/parser": 0,
     "@typescript-eslint/no-unused-vars": 0,
     "@typescript-eslint/no-unsafe-assignment": 1,
     "@typescript-eslint/no-unsafe-return": 1,

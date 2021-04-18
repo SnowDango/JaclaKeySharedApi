@@ -1,0 +1,12 @@
+{
+  "place": {
+    "input": "!add-place",
+    "remove": "!remove-place",
+    "show": "!place-list"
+  },
+  "status": {
+    "input": "!add-status",
+    "remove": "!remove-status",
+    "show": "!status-list"
+  }
+}

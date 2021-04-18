@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/discordCommand.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +37,14 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="SnowDango" />
+        <option name="repository" value="JaclaKeySharedApi" />
+      </RepoCoordinatesHolder>
+    </option>
+  </component>
   <component name="ProjectId" id="1oQ971DdSJcZ7QuBCAQxOk8MHR4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -57,17 +70,74 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Jest.basic">
-    <configuration name="basic" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.show status.should match return text database error.">
+    <configuration name="add status.should match return text database error." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/domain/usecase/ShareDiscord.test.ts" />
+      <test-file value="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" />
       <test-names>
-        <test-name value="basic" />
+        <test-name value="add status" />
+        <test-name value="should match return text database error." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="add status.should match return text null." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" />
+      <test-names>
+        <test-name value="add status" />
+        <test-name value="should match return text null." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="error update.should match return text null." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/model/PlaceUpdateModel.test.ts" />
+      <test-names>
+        <test-name value="error update" />
+        <test-name value="should match return text null." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="show status.should match return text database error." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" />
+      <test-names>
+        <test-name value="show status" />
+        <test-name value="should match return text database error." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="show status.should match return text show text." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/model/StatusUpdateModel.test.ts" />
+      <test-names>
+        <test-name value="show status" />
+        <test-name value="should match return text show text." />
       </test-names>
       <method v="2" />
     </configuration>
@@ -76,8 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.basic" />
-        <item itemvalue="Jest.basic" />
+        <item itemvalue="Jest.show status.should match return text database error." />
+        <item itemvalue="Jest.show status.should match return text show text." />
+        <item itemvalue="Jest.error update.should match return text null." />
+        <item itemvalue="Jest.add status.should match return text null." />
+        <item itemvalue="Jest.add status.should match return text database error." />
       </list>
     </recent_temporary>
   </component>
@@ -102,34 +175,6 @@
       <workItem from="1614315685064" duration="49000" />
       <workItem from="1618410198229" duration="702000" />
       <workItem from="1618410920379" duration="2053000" />
-    </task>
-    <task id="LOCAL-00001" summary="update README.md">
-      <created>1613325647711</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1613325647711</updated>
-    </task>
-    <task id="LOCAL-00002" summary="update README.md">
-      <created>1613325745351</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1613325745351</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update README.md">
-      <created>1613325779997</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1613325779997</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update README.md">
-      <created>1613326313870</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1613326313870</updated>
     </task>
     <task id="LOCAL-00005" summary="add test: cording check and build test">
       <created>1613327831168</created>
@@ -446,16 +491,41 @@
       <option name="project" value="LOCAL" />
       <updated>1618466012418</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="node version delete 10.x">
+      <created>1618466458179</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1618466458180</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add discord db control command">
+      <created>1618565787948</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1618565787948</updated>
+    </task>
+    <task id="LOCAL-00052" summary="add discord db command model test">
+      <created>1618738734339</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1618738734339</updated>
+    </task>
+    <task id="LOCAL-00053" summary="add discord db command model test">
+      <created>1618741241055</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1618741241056</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed deploy" />
-    <MESSAGE value="fixed controller used model" />
-    <MESSAGE value="add test and getUserName" />
     <MESSAGE value="fixed getUserName test" />
     <MESSAGE value="add variable type PascalCase" />
     <MESSAGE value="add key status search" />
@@ -478,7 +548,10 @@
     <MESSAGE value="discord bot login" />
     <MESSAGE value="shareDiscordをaxiosからdiscord.jsに変更" />
     <MESSAGE value="codeの整理" />
-    <option name="LAST_COMMIT_MESSAGE" value="codeの整理" />
+    <MESSAGE value="node version delete 10.x" />
+    <MESSAGE value="add discord db control command" />
+    <MESSAGE value="add discord db command model test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add discord db command model test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
