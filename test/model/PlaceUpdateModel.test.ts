@@ -1,5 +1,5 @@
 import PlaceUpdateModel from "../../src/model/PlaceUpdateModel";
-import {insertPlace, removePlace, showPlace} from "../../src/domain/usercase/UpdatePlaceDb";
+import {insertPlace, removePlace, showPlace} from "../../src/domain/usercase/db/UpdatePlaceDb";
 
 const model = new PlaceUpdateModel()
 

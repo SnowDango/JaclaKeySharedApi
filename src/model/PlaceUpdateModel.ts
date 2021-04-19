@@ -1,4 +1,4 @@
-import {insertPlace, PlaceData, removePlace, showPlace} from "../domain/usercase/UpdatePlaceDb";
+import {insertPlace, PlaceData, removePlace, showPlace} from "../domain/usercase/db/UpdatePlaceDb";
 
 export default class PlaceUpdateModel {
 

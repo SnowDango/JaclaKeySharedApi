@@ -2,12 +2,12 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/ja';
 import {Observable} from 'rxjs'
 
-import {shareSlack} from '../domain/usercase/ShareSlack'
-import {shareDiscord} from "../domain/usercase/ShareDiscord";
-import {getUserName} from "../domain/usercase/LineUser";
-import {howKeyStatus, whereKey} from "../domain/usercase/KeyStatus";
-import {shareTwitter} from "../domain/usercase/ShareTwitter";
-import {checkSticker} from "../domain/usercase/CheckSticker";
+import {shareSlack} from '../domain/usercase/share/ShareSlack'
+import {shareDiscord} from "../domain/usercase/share/ShareDiscord";
+import {getUserName} from "../domain/usercase/line/LineUser";
+import {howKeyStatus, whereKey} from "../domain/usercase/db/KeyStatus";
+import {shareTwitter} from "../domain/usercase/share/ShareTwitter";
+import {checkSticker} from "../domain/usercase/line/CheckSticker";
 import {statusString} from "../data/repository/PermanentCode";
 
 const STATUS_TYPE = {

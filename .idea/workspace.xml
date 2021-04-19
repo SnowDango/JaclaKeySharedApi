@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/discordCommand.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/usercase/line/stickerId.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DbUpdateController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usercase/CheckSticker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/line/CheckSticker.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +69,12 @@
     <property name="settings.editor.selected.configurable" value="settings.saveactions" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/domain/usercase/line" />
+      <recent name="$PROJECT_DIR$/src/domain/usercase/linesticker" />
+    </key>
   </component>
   <component name="RunManager" selected="Jest.show status.should match return text database error.">
     <configuration name="add status.should match return text database error." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -175,13 +181,6 @@
       <workItem from="1614315685064" duration="49000" />
       <workItem from="1618410198229" duration="702000" />
       <workItem from="1618410920379" duration="2053000" />
-    </task>
-    <task id="LOCAL-00005" summary="add test: cording check and build test">
-      <created>1613327831168</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1613327831168</updated>
     </task>
     <task id="LOCAL-00006" summary="add build.yml create dotenv">
       <created>1613329109704</created>
@@ -519,14 +518,20 @@
       <option name="project" value="LOCAL" />
       <updated>1618741241056</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="rewrite the discord command written in env to json">
+      <created>1618742429281</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1618742429281</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed getUserName test" />
     <MESSAGE value="add variable type PascalCase" />
     <MESSAGE value="add key status search" />
     <MESSAGE value="delete test pg" />
@@ -551,7 +556,8 @@
     <MESSAGE value="node version delete 10.x" />
     <MESSAGE value="add discord db control command" />
     <MESSAGE value="add discord db command model test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add discord db command model test" />
+    <MESSAGE value="rewrite the discord command written in env to json" />
+    <option name="LAST_COMMIT_MESSAGE" value="rewrite the discord command written in env to json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

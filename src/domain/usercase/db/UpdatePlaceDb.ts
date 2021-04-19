@@ -1,4 +1,4 @@
-import PlaceDB from "../entity/PlaceDB";
+import PlaceDB from "../../entity/PlaceDB";
 
 const placeDb = new PlaceDB()
 

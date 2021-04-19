@@ -1,4 +1,4 @@
-import {insertStatus, removeStatus, showStatus, StatusData} from "../domain/usercase/UpdateStatusDb";
+import {insertStatus, removeStatus, showStatus, StatusData} from "../domain/usercase/db/UpdateStatusDb";
 import {statusCode, statusString} from "../data/repository/PermanentCode";
 
 export default class StatusUpdateModel {

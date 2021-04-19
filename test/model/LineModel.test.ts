@@ -1,11 +1,11 @@
 import LineModel from "../../src/model/LineModel";
 import {load} from "ts-dotenv";
 import MockDate from 'mockdate'
-import {getUserName} from '../../src/domain/usercase/LineUser';
-import {howKeyStatus, whereKey} from '../../src/domain/usercase/KeyStatus';
-import {shareTwitter} from "../../src/domain/usercase/ShareTwitter";
-import {shareDiscord} from "../../src/domain/usercase/ShareDiscord";
-import {shareSlack} from "../../src/domain/usercase/ShareSlack";
+import {getUserName} from '../../src/domain/usercase/line/LineUser';
+import {howKeyStatus, whereKey} from '../../src/domain/usercase/db/KeyStatus';
+import {shareTwitter} from "../../src/domain/usercase/share/ShareTwitter";
+import {shareDiscord} from "../../src/domain/usercase/share/ShareDiscord";
+import {shareSlack} from "../../src/domain/usercase/share/ShareSlack";
 
 const env = load({
   LINE_USER_ID: String,
