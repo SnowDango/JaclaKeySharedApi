@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,13 +105,6 @@
       <workItem from="1614315685064" duration="49000" />
       <workItem from="1618410198229" duration="702000" />
       <workItem from="1618410920379" duration="2053000" />
-    </task>
-    <task id="LOCAL-00011" summary="add HEROKUへの自動deploy時のversion指定">
-      <created>1613337383878</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1613337383878</updated>
     </task>
     <task id="LOCAL-00012" summary="add HEROKUへの自動deploy時のversion指定">
       <created>1613337656050</created>
@@ -448,14 +442,20 @@
       <option name="project" value="LOCAL" />
       <updated>1618913007432</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="fixed dayjs timezone">
+      <created>1618913542198</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1618913542198</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed lint" />
     <MESSAGE value="fixed model" />
     <MESSAGE value="crate textModel into LineModel and test" />
     <MESSAGE value="add twitterText into LineModel and test" />
@@ -480,7 +480,8 @@
     <MESSAGE value="dayjs set default timezone" />
     <MESSAGE value="model fixed rxjs subscriber" />
     <MESSAGE value="fixed twitter status string" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed twitter status string" />
+    <MESSAGE value="fixed dayjs timezone" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed dayjs timezone" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

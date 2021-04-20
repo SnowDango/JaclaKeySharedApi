@@ -1,7 +1,5 @@
 import dayjs from 'dayjs';
 import 'dayjs/locale/ja';
-import timezone from 'dayjs/plugin/timezone';
-import utc from 'dayjs/plugin/utc';
 import {Observable} from 'rxjs'
 
 import {shareSlack} from '../domain/usercase/share/ShareSlack'
@@ -11,10 +9,6 @@ import {howKeyStatus, whereKey} from "../domain/usercase/db/KeyStatus";
 import {shareTwitter} from "../domain/usercase/share/ShareTwitter";
 import {checkSticker} from "../domain/usercase/line/CheckSticker";
 import {statusString} from "../data/repository/PermanentCode";
-
-dayjs.extend(utc);
-dayjs.extend(timezone);
-dayjs.tz.setDefault('America/New_York');
 
 const STATUS_TYPE = {
   borrowed: 1,
@@ -51,7 +45,7 @@ export default class LineModel {
         baseStatus: `${userName}が鍵を持ち帰りました`,
         baseText: ` user: ${userName} \n` +
           ` status: 持ち帰りました \n` +
-          ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
+          ` data: ${dayjs(new Date()).add(9, 'hour').locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
         twitterText: 'not text'
       })
       return true
