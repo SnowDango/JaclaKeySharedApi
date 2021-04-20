@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="model fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usercase/share/ShareDiscord.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usercase/share/ShareDiscord.ts" afterDir="false" />
+    <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,27 +104,6 @@
       <workItem from="1614315685064" duration="49000" />
       <workItem from="1618410198229" duration="702000" />
       <workItem from="1618410920379" duration="2053000" />
-    </task>
-    <task id="LOCAL-00008" summary="eslintの改善">
-      <created>1613334868764</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1613334868764</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add HEROKUへの自動deploy">
-      <created>1613337165388</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1613337165388</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add HEROKUへの自動deploy時のversion指定">
-      <created>1613337314530</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1613337314530</updated>
     </task>
     <task id="LOCAL-00011" summary="add HEROKUへの自動deploy時のversion指定">
       <created>1613337383878</created>
@@ -450,15 +427,34 @@
       <option name="project" value="LOCAL" />
       <updated>1618910541390</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="model fixed rxjs subscriber">
+      <created>1618911130180</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1618911130181</updated>
+    </task>
+    <task id="LOCAL-00058" summary="model fixed rxjs subscriber">
+      <created>1618911763060</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1618911763060</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fixed twitter status string">
+      <created>1618913007432</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1618913007432</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add key status search" />
-    <MESSAGE value="delete test pg" />
     <MESSAGE value="fixed lint" />
     <MESSAGE value="fixed model" />
     <MESSAGE value="crate textModel into LineModel and test" />
@@ -482,7 +478,9 @@
     <MESSAGE value="fixed port setting" />
     <MESSAGE value="change received json element" />
     <MESSAGE value="dayjs set default timezone" />
-    <option name="LAST_COMMIT_MESSAGE" value="dayjs set default timezone" />
+    <MESSAGE value="model fixed rxjs subscriber" />
+    <MESSAGE value="fixed twitter status string" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed twitter status string" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

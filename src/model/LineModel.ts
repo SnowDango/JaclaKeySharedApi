@@ -12,10 +12,9 @@ import {shareTwitter} from "../domain/usercase/share/ShareTwitter";
 import {checkSticker} from "../domain/usercase/line/CheckSticker";
 import {statusString} from "../data/repository/PermanentCode";
 
-dayjs.locale('ja');
 dayjs.extend(utc);
 dayjs.extend(timezone);
-dayjs.tz.setDefault('Asia/Tokyo');
+dayjs.tz.setDefault('America/New_York');
 
 const STATUS_TYPE = {
   borrowed: 1,
@@ -89,7 +88,7 @@ export default class LineModel {
           baseStatus: `${user}が鍵を${statusString(stickerCode)}ました。`,
           baseText: ` user: ${user} \n` +
             ` status: ${statusString(stickerCode)}ました \n` +
-            ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
+            ` data: ${dayjs(new Date()).add(9, 'hour').locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
           twitterText: 'not text'
         })
         break;
@@ -111,8 +110,8 @@ export default class LineModel {
         if (placeData !== undefined) { // 場所情報が鍵情報に挟まれているとき
           resStatus.push(`${placeData.place}の鍵を`)
         } else { // 挟まれていないとき
-          if (twitterTexts[twitterTexts.length - 1] === statusString(0) ||
-            twitterTexts[twitterTexts.length - 1] === statusString(1)) twitterTexts.push("て")
+          if (twitterTexts[twitterTexts.length - 1] === statusString(2) ||
+            twitterTexts[twitterTexts.length - 1] === statusString(3)) twitterTexts.push("て")
           resStatus.push("て")
           resTexts.push("て")
         }
@@ -163,6 +162,7 @@ export default class LineModel {
             break;
           default:
             subscriber.error(target)
+            console.log(code)
             break;
         }
       }

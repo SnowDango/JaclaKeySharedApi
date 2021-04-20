@@ -20,10 +20,10 @@ const model = new LineModel();
 MockDate.set(new Date('2/20/2021'));
 (getUserName as any) = jest.fn(async () => ("LineUserName"));
 (shareDiscord as any) = jest.fn(async () => {
-  return {status: 204}
+  return 204
 });
 (shareSlack as any) = jest.fn(async () => {
-  return {status: 200}
+  return 200
 });
 
 describe('borrowed', () => {
