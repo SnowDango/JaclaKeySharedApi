@@ -9,18 +9,18 @@ router.post('/fromLine', (req, res) => {
   const controller = new KeyStatusController(res)
 
   const body = req.body
-  const messageType: string = body.events[0].type
+  const messageType: string = body.events[0].message.type
   const userId = body.events[0].source.userId
 
   if (messageType === "text") { // messagePatternがTextの時
 
-    const text = body.events[0].text
+    const text = body.events[0].message.text
     controller.fromLineText(userId, text)
 
   } else if (messageType === "sticker") { // messagePatternがstickerの時
 
-    const packageId = body.events[0].packageId
-    const stickerId = body.events[0].stickerId
+    const packageId = body.events[0].message.packageId
+    const stickerId = body.events[0].message.stickerId
     controller.fromLineSticker(userId, packageId, stickerId)
 
   }
