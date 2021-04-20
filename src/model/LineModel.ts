@@ -1,5 +1,7 @@
 import dayjs from 'dayjs';
 import 'dayjs/locale/ja';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import {Observable} from 'rxjs'
 
 import {shareSlack} from '../domain/usercase/share/ShareSlack'
@@ -9,6 +11,11 @@ import {howKeyStatus, whereKey} from "../domain/usercase/db/KeyStatus";
 import {shareTwitter} from "../domain/usercase/share/ShareTwitter";
 import {checkSticker} from "../domain/usercase/line/CheckSticker";
 import {statusString} from "../data/repository/PermanentCode";
+
+dayjs.locale('ja');
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault('Asia/Tokyo');
 
 const STATUS_TYPE = {
   borrowed: 1,

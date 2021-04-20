@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="78e0e14c-2e07-4015-a0a2-64b81cba058b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LineModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LineModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,13 +105,6 @@
       <workItem from="1614315685064" duration="49000" />
       <workItem from="1618410198229" duration="702000" />
       <workItem from="1618410920379" duration="2053000" />
-    </task>
-    <task id="LOCAL-00005" summary="add test: cording check and build test">
-      <created>1613327831168</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1613327831168</updated>
     </task>
     <task id="LOCAL-00006" summary="add build.yml create dotenv">
       <created>1613329109704</created>
@@ -448,14 +442,20 @@
       <option name="project" value="LOCAL" />
       <updated>1618908084495</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="change received json element">
+      <created>1618909255485</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1618909255485</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed getUserName test" />
     <MESSAGE value="add variable type PascalCase" />
     <MESSAGE value="add key status search" />
     <MESSAGE value="delete test pg" />
@@ -480,7 +480,8 @@
     <MESSAGE value="figletの修正" />
     <MESSAGE value="change port 3000 -&gt; 5000" />
     <MESSAGE value="fixed port setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed port setting" />
+    <MESSAGE value="change received json element" />
+    <option name="LAST_COMMIT_MESSAGE" value="change received json element" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
