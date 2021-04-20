@@ -163,6 +163,7 @@ export default class LineModel {
             break;
           default:
             subscriber.error(target)
+            console.log(code)
             break;
         }
       }
