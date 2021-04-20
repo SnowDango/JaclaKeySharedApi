@@ -73,7 +73,7 @@ export default class LineModel {
           baseStatus: `${user}が鍵を${statusString(stickerCode)}ました。`,
           baseText: ` user: ${user} \n` +
             ` status: ${statusString(stickerCode)}ました \n` +
-            ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
+            ` data: ${dayjs(new Date()).add(9, 'hour').locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
           twitterText: `${statusString(stickerCode)}ました`
         })
         break;
@@ -122,7 +122,7 @@ export default class LineModel {
     })
     if (twitterTexts.length !== 0) {
       if (twitterTexts[twitterTexts.length - 1] === "て") twitterTexts.splice(twitterTexts.length - 1, 1)
-      twitterTexts.push("ました")
+      twitterTexts.push("います")
     }
     resStatus.push("ました")
     resTexts.push("ました")
