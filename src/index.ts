@@ -9,7 +9,7 @@ const env = load({
 })
 
 // server設定
-const port = 5000 // port変更しても可
+const port = process.env.PORT || 5000 // port変更しても可
 const startedFunc = () => { // 開始時のfunc
   figlet.loadFontSync("Standard")
   figlet.text('JACLA KEY SHARE!', ((error, result) => {
