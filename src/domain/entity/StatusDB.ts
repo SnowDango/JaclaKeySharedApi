@@ -7,7 +7,7 @@ const env = load({
 
 export default class StatusDB {
   private readonly client: Pool
-  public tableName: string = "status"
+  public tableName = "status"
 
   constructor() {
     this.client = new Pool({

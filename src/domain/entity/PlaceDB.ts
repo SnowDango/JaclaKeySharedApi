@@ -7,7 +7,7 @@ const env = load({
 
 export default class PlaceDB {
   private readonly client: Pool
-  public tableName: string = "place"
+  public tableName = "place"
 
   constructor() {
     this.client = new Pool({
