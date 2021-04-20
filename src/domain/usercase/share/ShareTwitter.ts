@@ -16,12 +16,19 @@ const twitterClient = new TwitterApi({
 });
 
 export const shareTwitter = async (baseStatus: string): Promise<number> => {
-  if (baseStatus === 'not text') {
+  if (baseStatus !== 'not text') {
     const result = await twitterClient.v1.tweet(baseStatus).catch(error => {
-      return {text: "error"}
+      return error
     })
     if (result.text === baseStatus) {
       return 200
+    } else if (result.data.errors[0].code === 187) { //重複するtweet
+      const tweetAgainResult = await shareTwitter(baseStatus + "。");
+      if (tweetAgainResult === 200) {
+        return 200
+      } else {
+        return 404
+      }
     } else {
       return 404
     }

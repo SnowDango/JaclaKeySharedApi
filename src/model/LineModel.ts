@@ -149,7 +149,10 @@ export default class LineModel {
             subscriber.next("should not shared")
             if (clearList.length === 3) subscriber.complete()
             break;
-          case 404:
+          case 404 || 404:
+            subscriber.error(target)
+            break;
+          default :
             subscriber.error(target)
             break;
         }
