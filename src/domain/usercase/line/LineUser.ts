@@ -2,9 +2,10 @@ import {load} from 'ts-dotenv'
 import axios from 'axios'
 
 const env = load({
-  LINE_API_URL: String,
   LINE_CHANNEL_ACCESS_TOKEN: String
 })
+
+const lineUserApiUrl = "https://api.line.me/v2/bot/profile/"
 
 export const getUserName = async (userId: string): Promise<string> => {
   const content = {
@@ -14,7 +15,7 @@ export const getUserName = async (userId: string): Promise<string> => {
     }
   }
   // LineからUserNameを持ってくる
-  const userData = await axios.get(env.LINE_API_URL + userId, content).catch(error => {
+  const userData = await axios.get(lineUserApiUrl + userId, content).catch(error => {
     return {status: 404, data: {}}
   })
   return (() => {

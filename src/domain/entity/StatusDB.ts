@@ -2,13 +2,12 @@ import {Pool, QueryResult} from 'pg'
 import {load} from "ts-dotenv";
 
 const env = load({
-  DB_URL: String,
-  DB_TABLE_NAME_STATUS: String
+  DB_URL: String
 })
 
 export default class StatusDB {
   private readonly client: Pool
-  public tableName: string = env.DB_TABLE_NAME_STATUS
+  public tableName: string = "status"
 
   constructor() {
     this.client = new Pool({
