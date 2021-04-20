@@ -1,36 +1,53 @@
 {
   "name": "jacla-key-shared-api",
   "version": "1.0.0",
-  "main": ".dist/index.js",
+  "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.20",
+    "@types/pg": "^7.14.10",
+    "@types/pg-promise": "^5.4.3",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
+    "discord.js": "^12.5.3",
     "dotenv": "^8.2.0",
     "eslint": "^7.20.0",
     "express": "^4.17.1",
+    "figlet": "^1.5.0",
     "jest": "^26.6.3",
     "json5": "^2.2.0",
+    "mockdate": "^3.0.2",
+    "pg": "^8.5.1",
+    "pg-promise": "^10.9.2",
+    "rxjs": "^6.6.3",
+    "ts-dotenv": "^0.8.3",
     "ts-jest": "^26.5.1",
     "ts-node": "^9.1.1",
+    "ts-postgres": "^1.1.3",
+    "twitter-api-v2": "^0.3.0",
     "typescript": "^4.1.5"
   },
   "jest": {
+    "testEnvironment": "node",
     "moduleFileExtensions": [
-      "ts"
+      "ts",
+      "js"
     ],
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
     },
     "globals": {
       "ts-jest": {
-        "tsConfigFile": "tsconfig.json"
+        "tsconfig": "tsconfig.json",
+        "diagnostics": true
       }
     },
     "testMatch": [
-      "test/*.(ts|tsx|js)"
+      "**/test/*.test.(ts|tsx|js)",
+      "**/test/**/*.test.(ts|tsx|js)"
     ]
   },
   "scripts": {
@@ -39,6 +56,9 @@
     "clean": "rimraf dist/*",
     "debug": "yarn lint && tsc && yarn clean",
     "start": "ts-node src/index.ts",
-    "test": "jest"
+    "test": "jest --silent false --verbose false"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.2.1"
   }
 }
