@@ -138,7 +138,7 @@ export default class LineModel {
       baseStatus: resStatus.join(''),
       baseText: ` user: ${userName} \n` +
         ` status: ${resTexts.join('')} \n` +
-        ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
+        ` data: ${dayjs(new Date()).format('YYYY/MM/DD(dd) HH:mm:ss')}`,
       twitterText: twitterTexts.join('')
     }
   }
