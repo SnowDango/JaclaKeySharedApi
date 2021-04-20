@@ -1,5 +1,7 @@
 import dayjs from 'dayjs';
 import 'dayjs/locale/ja';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import {Observable} from 'rxjs'
 
 import {shareSlack} from '../domain/usercase/share/ShareSlack'
@@ -9,6 +11,11 @@ import {howKeyStatus, whereKey} from "../domain/usercase/db/KeyStatus";
 import {shareTwitter} from "../domain/usercase/share/ShareTwitter";
 import {checkSticker} from "../domain/usercase/line/CheckSticker";
 import {statusString} from "../data/repository/PermanentCode";
+
+dayjs.locale('ja');
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault('Asia/Tokyo');
 
 const STATUS_TYPE = {
   borrowed: 1,
@@ -131,7 +138,7 @@ export default class LineModel {
       baseStatus: resStatus.join(''),
       baseText: ` user: ${userName} \n` +
         ` status: ${resTexts.join('')} \n` +
-        ` data: ${dayjs(new Date()).locale('ja').format('YYYY/MM/DD(dd) HH:mm:ss')}`,
+        ` data: ${dayjs(new Date()).format('YYYY/MM/DD(dd) HH:mm:ss')}`,
       twitterText: twitterTexts.join('')
     }
   }
@@ -141,7 +148,8 @@ export default class LineModel {
     const observable = new Observable(subscriber => {
       const resultCodeCheck = (code: number, target: string) => {
         switch (code) {
-          case 200 || 204:
+          case 200:
+          case 204:
             subscriber.next(`${target} is success`)
             if (clearList.length === 3) subscriber.complete()
             break;
@@ -149,10 +157,11 @@ export default class LineModel {
             subscriber.next("should not shared")
             if (clearList.length === 3) subscriber.complete()
             break;
-          case 404 || 404:
+          case 400:
+          case 404:
             subscriber.error(target)
             break;
-          default :
+          default:
             subscriber.error(target)
             break;
         }
