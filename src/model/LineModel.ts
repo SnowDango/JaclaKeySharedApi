@@ -111,8 +111,8 @@ export default class LineModel {
         if (placeData !== undefined) { // 場所情報が鍵情報に挟まれているとき
           resStatus.push(`${placeData.place}の鍵を`)
         } else { // 挟まれていないとき
-          if (twitterTexts[twitterTexts.length - 1] === statusString(0) ||
-            twitterTexts[twitterTexts.length - 1] === statusString(1)) twitterTexts.push("て")
+          if (twitterTexts[twitterTexts.length - 1] === statusString(2) ||
+            twitterTexts[twitterTexts.length - 1] === statusString(3)) twitterTexts.push("て")
           resStatus.push("て")
           resTexts.push("て")
         }
