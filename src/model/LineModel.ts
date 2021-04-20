@@ -148,7 +148,8 @@ export default class LineModel {
     const observable = new Observable(subscriber => {
       const resultCodeCheck = (code: number, target: string) => {
         switch (code) {
-          case 200 || 204:
+          case 200:
+          case 204:
             subscriber.next(`${target} is success`)
             if (clearList.length === 3) subscriber.complete()
             break;
@@ -156,10 +157,11 @@ export default class LineModel {
             subscriber.next("should not shared")
             if (clearList.length === 3) subscriber.complete()
             break;
-          case 404 || 404:
+          case 400:
+          case 404:
             subscriber.error(target)
             break;
-          default :
+          default:
             subscriber.error(target)
             break;
         }
