@@ -7,14 +7,12 @@ import {shareTwitter} from "../../src/domain/usercase/share/ShareTwitter";
 import {shareDiscord} from "../../src/domain/usercase/share/ShareDiscord";
 import {shareSlack} from "../../src/domain/usercase/share/ShareSlack";
 
+import StickerIds from '../../src/domain/usercase/line/stickerId.json';
+
 const env = load({
-  LINE_USER_ID: String,
-  LINE_STICKER_PACKAGE_ID: String,
-  LINE_STICKER_ID_BORROW: String,
-  LINE_STICKER_ID_OPEN: String,
-  LINE_STICKER_ID_CLOSE: String,
-  LINE_STICKER_ID_RETURN: String
+  LINE_USER_ID: String
 })
+
 
 const model = new LineModel();
 
@@ -192,7 +190,7 @@ describe('sticker borrow', () => {
   });
   it('should status is borrow', async () => {
     (shareTwitter as any) = jest.fn(async () => (300));
-    const result: boolean = await model.stickerModel(env.LINE_USER_ID, env.LINE_STICKER_PACKAGE_ID, env.LINE_STICKER_ID_BORROW)
+    const result: boolean = await model.stickerModel(env.LINE_USER_ID, StickerIds.package, StickerIds.borrow)
     expect(result).toBeTruthy()
   });
 })
@@ -203,7 +201,7 @@ describe('sticker open', () => {
   });
   it('should status is open', async () => {
     (shareTwitter as any) = jest.fn(async () => (200));
-    const result: boolean = await model.stickerModel(env.LINE_USER_ID, env.LINE_STICKER_PACKAGE_ID, env.LINE_STICKER_ID_OPEN)
+    const result: boolean = await model.stickerModel(env.LINE_USER_ID, StickerIds.package, StickerIds.open)
     expect(result).toBeTruthy();
   });
 })
@@ -214,7 +212,7 @@ describe('sticker close', () => {
   })
   it('should status is close', async () => {
     (shareTwitter as any) = jest.fn(async () => (200));
-    const result: boolean = await model.stickerModel(env.LINE_USER_ID, env.LINE_STICKER_PACKAGE_ID, env.LINE_STICKER_ID_CLOSE)
+    const result: boolean = await model.stickerModel(env.LINE_USER_ID, StickerIds.package, StickerIds.closed)
     expect(result).toBeTruthy();
   });
 })
@@ -225,7 +223,7 @@ describe('sticker return', () => {
   })
   it('should status is close', async () => {
     (shareTwitter as any) = jest.fn(async () => (300));
-    const result: boolean = await model.stickerModel(env.LINE_USER_ID, env.LINE_STICKER_PACKAGE_ID, env.LINE_STICKER_ID_RETURN)
+    const result: boolean = await model.stickerModel(env.LINE_USER_ID, StickerIds.package, StickerIds.return)
     expect(result).toBeTruthy();
   });
 })
