@@ -1,4 +1,4 @@
-import StatusDB from "../entity/StatusDB";
+import StatusDB from "../../entity/StatusDB";
 
 const statusDb = new StatusDB()
 

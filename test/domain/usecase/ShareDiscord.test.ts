@@ -1,4 +1,4 @@
-import {shareDiscord} from '../../../src/domain/usercase/ShareDiscord'
+import {shareDiscord} from '../../../src/domain/usercase/share/ShareDiscord'
 import {WebhookClient} from "discord.js";
 
 jest.mock('discord.js')

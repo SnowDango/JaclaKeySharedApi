@@ -1,8 +1,8 @@
 import {QueryResult} from 'pg'
-import StatusDB from "../entity/StatusDB";
-import PlaceDB from "../entity/PlaceDB";
+import StatusDB from "../../entity/StatusDB";
+import PlaceDB from "../../entity/PlaceDB";
 
-export const howKeyStatus = async (message: string): Promise<Array<{index: number,status: number}>> => {
+export const howKeyStatus = async (message: string): Promise<Array<{ index: number, status: number }>> => {
   const statusDb = new StatusDB()
   const allData: QueryResult = await statusDb.getAll()
 
@@ -13,7 +13,7 @@ export const howKeyStatus = async (message: string): Promise<Array<{index: numbe
   })).filter(data => data.index !== -1)
 }
 
-export const whereKey = async (message: string): Promise<Array<{index: number,place: string}>> => {
+export const whereKey = async (message: string): Promise<Array<{ index: number, place: string }>> => {
   const placeDb = new PlaceDB()
   const allData: QueryResult = await placeDb.getAll()
 

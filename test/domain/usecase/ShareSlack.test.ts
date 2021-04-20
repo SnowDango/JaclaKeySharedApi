@@ -1,4 +1,4 @@
-import {shareSlack} from "../../../src/domain/usercase/ShareSlack"
+import {shareSlack} from "../../../src/domain/usercase/share/ShareSlack"
 import axios from "axios";
 
 jest.mock("axios")

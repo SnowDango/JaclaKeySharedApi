@@ -3,7 +3,6 @@ import {WebhookClient} from "discord.js";
 
 
 const env = load({
-  DISCORD_URL: String,
   DISCORD_WEBHOOK_ID: String,
   DISCORD_TOKEN: String,
   DISCORD_WEBHOOK_TOKEN: String

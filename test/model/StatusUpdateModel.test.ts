@@ -1,5 +1,5 @@
 import StatusUpdateModel from "../../src/model/StatusUpdateModel";
-import {insertStatus, removeStatus, showStatus} from "../../src/domain/usercase/UpdateStatusDb";
+import {insertStatus, removeStatus, showStatus} from "../../src/domain/usercase/db/UpdateStatusDb";
 
 const model = new StatusUpdateModel();
 
