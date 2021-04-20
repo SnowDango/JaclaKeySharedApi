@@ -59,6 +59,6 @@
     "test": "jest --silent false --verbose false"
   },
   "devDependencies": {
-    "@types/figlet": "^1.2.1"
+    "@types/figlet": "^1.5.1"
   }
 }
